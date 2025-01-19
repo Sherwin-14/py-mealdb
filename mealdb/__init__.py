@@ -44,9 +44,29 @@ def list_meal_categories():
 
 def filter_by_ingredient(ingredient):
 
-    r = httpx.get(f'www.themealdb.com/api/json/v1/1/filter.php?i={ingredient}')
+    r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/filter.php?i={ingredient}')
+    data = r.json()
+    meal = data['meals']
     
-    return r.json()
+    return list(meal)
+
+def filter_by_category(category):
+
+    r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/filter.php?c={category}')
+    data = r.json()
+    meal = data['meals']
+    
+    return list(meal)
+
+def filter_by_area(area):
+
+    r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/filter.php?a={area}')
+    data = r.json()
+    meal = data['meals']
+    
+    return list(meal)
+
+
 
 
 
