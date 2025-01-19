@@ -5,9 +5,9 @@ def get_meal_by_name(name):
 
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/search.php?s={name}')
     data = r.json()
-    meals = data['meals']
+    meal = data['meals']
     
-    return list(meals)
+    return list(meal)
 
 
 def list_all_meals(letter):
@@ -22,15 +22,19 @@ def list_all_meals(letter):
 def meal_details_by_id(id):
 
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/lookup.php?i={id}')
+    data = r.json()
+    meal = data['meals']
     
-    return r.json()
+    return list(meal)
 
 
 def single_random_meal():
 
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/random.php')
+    data = r.json()
+    meal = data['meals']
     
-    return r.json()
+    return list(meal)
 
 def list_meal_categories():
 
