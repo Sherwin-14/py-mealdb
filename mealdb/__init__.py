@@ -38,10 +38,34 @@ def single_random_meal():
 def list_meal_categories():
 
     r = httpx.get('https://www.themealdb.com/api/json/v1/1/categories.php')
+    data = r.json()
+    meal = data['meals']
     
     return r.json()
 
-def 
+def list_all_categories():
+    
+    r = httpx.get('https://www.themealdb.com/api/json/v1/1/categories.php')
+    data = r.json()
+    
+    return list(data)
+
+def list_all_areas():
+    
+    r = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
+    data = r.json()
+    areas = data['meals']
+    
+    return list(areas)
+
+def list_all_ingredients():
+    
+    r = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?i=list')
+    data = r.json()
+    ingredients = data['meals']
+    
+    return list(ingredients)
+
 
 def list_all():
     
