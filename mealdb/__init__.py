@@ -1,13 +1,30 @@
 import httpx
 
 
-def get_meal_by_name(name):
-
-    r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/search.php?s={name}')
-    data = r.json()
-    meal = data['meals']
+def get_meal_by_name(name):  
+    try:
+        r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/search.php?s={name}')
+        data = r.json()
+        meal = data['meals']
+        return list(meal)
     
-    return list(meal)
+    except httpx.HTTPError as http_err:
+        print(f'HTTP error occurred: {http_err}')
+
+    except httpx.ConnectTimeout as conn_err:
+        print(f'Connection timeout error occurred: {conn_err}')
+
+    except httpx.TimeoutException as time_err:
+        print(f'An operation has timed out: {time_err}')
+
+    except httpx.ReadTimeout as redtime_err:
+        print(f'Timed out while receiving data from the host: {redtime_err}')
+
+    except httpx.ConnectError as conn_err:
+        print(f'Failed to establish a connection: {conn_err}')
+
+    except httpx.ReadError as read_err:
+        print(f'Failed to receive data from the network: {read_err}')
 
 
 def list_all_meals(letter):

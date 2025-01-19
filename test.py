@@ -1,6 +1,6 @@
 import mealdb as mb
 
-meal = mb.filter_by_area("Mexican")
+meal = mb.single_random_meal()
 
 #print(meal)
 print(meal)
