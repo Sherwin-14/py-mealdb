@@ -1,6 +1,6 @@
 import mealdb as mb
 
-meal = mb.single_random_meal()
+meal = mb.list_all()
 
 #print(meal)
 print(meal)
