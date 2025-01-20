@@ -66,7 +66,6 @@ def list_all_ingredients():
     
     return list(ingredients)
 
-
 def list_all():
     
      r1 = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
@@ -105,13 +104,3 @@ def filter_by_area(area):
     meal = data['meals']
     
     return list(meal)
-
-
-
-
-
-
-
-
-
-    
