@@ -1,6 +1,8 @@
-import mealdb as mb
+from mealdb import MealDB
 
-meal = mb.get_meal_by_name("Blini Pancakes")
 
-#print(meal)
+meal_db = MealDB(1)  # Uses the default API key of '1'
+
+# Get a meal by name
+meal = meal_db.get_meal_by_name('Blini Pancakes')
 print(meal)
