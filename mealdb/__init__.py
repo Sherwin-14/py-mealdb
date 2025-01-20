@@ -71,7 +71,7 @@ def meal_details_by_id(id):
     return list(meal)
 
 
-def single_random_meal():
+def single_random_meal() -> list:
     """
     Retrieves a single random meal from the MealDB API.
 
@@ -91,7 +91,7 @@ def single_random_meal():
     
     return list(meal)
 
-def list_meal_categories():
+def list_meal_categories() -> list:
     """
     Retrieves a list of meal categories from the MealDB API.
 
@@ -111,14 +111,26 @@ def list_meal_categories():
     
     return r.json()
 
-def list_all_categories():
-    
+def list_all_categories() -> list:
+    """
+    Retrieves a list of all categories from the MealDB API.
+
+    Returns:
+        list: A list of dictionaries containing the categories.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to retrieve a list of all categories.
+        The API returns a dictionary containing the categories, which is then converted to a list and returned by this function.
+    """
     r = httpx.get('https://www.themealdb.com/api/json/v1/1/categories.php')
     data = r.json()
     
     return list(data)
 
-def list_all_areas():
+def list_all_areas() -> list:
     
     r = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
     data = r.json()
@@ -126,7 +138,7 @@ def list_all_areas():
     
     return list(areas)
 
-def list_all_ingredients():
+def list_all_ingredients() -> list:
     
     r = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?i=list')
     data = r.json()
@@ -134,7 +146,7 @@ def list_all_ingredients():
     
     return list(ingredients)
 
-def list_all():
+def list_all() -> list:
     
      r1 = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
      data1 = r1.json()
@@ -149,7 +161,7 @@ def list_all():
 
      return answers
 
-def filter_by_ingredient(ingredient):
+def filter_by_ingredient(ingredient) -> list:
 
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/filter.php?i={ingredient}')
     data = r.json()
@@ -157,7 +169,7 @@ def filter_by_ingredient(ingredient):
     
     return list(meal)
 
-def filter_by_category(category):
+def filter_by_category(category) -> list:
 
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/filter.php?c={category}')
     data = r.json()
@@ -165,7 +177,7 @@ def filter_by_category(category):
     
     return list(meal)
 
-def filter_by_area(area):
+def filter_by_area(area) -> list:
 
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/filter.php?a={area}')
     data = r.json()
