@@ -23,30 +23,6 @@ def get_meal_by_name(name) -> list:
     return list(meal)
 
 
-def list_all_meals(letter) -> list:
-    """
-    Retrieves a list of meals starting with a specific letter from the MealDB API.
-
-    Args:
-        letter (str): The letter to search for (e.g. 'a', 'b', etc.).
-
-    Returns:
-        list: A list of meals starting with the specified letter.
-
-    Raises:
-        httpx.HTTPError: If the API request fails.
-
-    Notes:
-        This function uses the MealDB API to search for meals by letter.
-        The API returns a list of meals, which is then returned by this function.
-    """
-    r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/search.php?f={letter}')
-    data = r.json()
-    meals = data['meals']
-    
-    return list(meals)
-
-
 def meal_details_by_id(id) -> list:
     """
     Retrieves the details of a meal by its ID from the MealDB API.
@@ -70,7 +46,6 @@ def meal_details_by_id(id) -> list:
     
     return list(meal)
 
-
 def single_random_meal() -> list:
     """
     Retrieves a single random meal from the MealDB API.
@@ -90,6 +65,30 @@ def single_random_meal() -> list:
     meal = data['meals']
     
     return list(meal)
+
+def list_all_meals(letter) -> list:
+    """
+    Retrieves a list of meals starting with a specific letter from the MealDB API.
+
+    Args:
+        letter (str): The letter to search for (e.g. 'a', 'b', etc.).
+
+    Returns:
+        list: A list of meals starting with the specified letter.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to search for meals by letter.
+        The API returns a list of meals, which is then returned by this function.
+    """
+    r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/search.php?f={letter}')
+    data = r.json()
+    meals = data['meals']
+    
+    return list(meals)
+
 
 def list_meal_categories() -> list:
     """
