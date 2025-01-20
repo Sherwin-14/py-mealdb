@@ -230,7 +230,7 @@ class MealDB:
         Retrieves a list of meals that belong to a specific category from the MealDB API.
 
         Args:
-            category (str): The category to filter by.
+            category (str): The category to filter by. (e.g. Seafood)
 
         Returns:
             list: A list of dictionaries containing the meals that belong to the specified category.
