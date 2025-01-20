@@ -1,6 +1,6 @@
 import httpx
 
-def get_meal_by_name(name):  
+def get_meal_by_name(name) -> list:  
     """
     Retrieves a list of meals by name from the MealDB API.
 
@@ -23,7 +23,7 @@ def get_meal_by_name(name):
     return list(meal)
 
 
-def list_all_meals(letter):
+def list_all_meals(letter) -> list:
     """
     Retrieves a list of meals starting with a specific letter from the MealDB API.
 
@@ -47,7 +47,7 @@ def list_all_meals(letter):
     return list(meals)
 
 
-def meal_details_by_id(id):
+def meal_details_by_id(id) -> list:
     """
     Retrieves the details of a meal by its ID from the MealDB API.
 
