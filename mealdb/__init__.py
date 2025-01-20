@@ -64,7 +64,6 @@ def meal_details_by_id(id):
         This function uses the MealDB API to retrieve the details of a meal by its ID.
         The API returns a list containing the meal details, which is then returned by this function.
     """
-
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/lookup.php?i={id}')
     data = r.json()
     meal = data['meals']
@@ -73,7 +72,19 @@ def meal_details_by_id(id):
 
 
 def single_random_meal():
+    """
+    Retrieves a single random meal from the MealDB API.
 
+    Returns:
+        list: A list containing the details of a random meal.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to retrieve a single random meal.
+        The API returns a list containing the meal details, which is then returned by this function.
+    """
     r = httpx.get('https://www.themealdb.com/api/json/v1/1/random.php')
     data = r.json()
     meal = data['meals']
@@ -81,7 +92,19 @@ def single_random_meal():
     return list(meal)
 
 def list_meal_categories():
+    """
+    Retrieves a list of meal categories from the MealDB API.
 
+    Returns:
+        dict: A dictionary containing the list of meal categories.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to retrieve a list of meal categories.
+        The API returns a dictionary containing the categories, which is then returned by this function.
+    """
     r = httpx.get('https://www.themealdb.com/api/json/v1/1/categories.php')
     data = r.json()
     meal = data['meals']
