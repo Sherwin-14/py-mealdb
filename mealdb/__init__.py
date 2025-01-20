@@ -131,7 +131,19 @@ def list_all_categories() -> list:
     return list(data)
 
 def list_all_areas() -> list:
-    
+    """
+    Retrieves a list of all areas from the MealDB API.
+
+    Returns:
+        list: A list of dictionaries containing the areas.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to retrieve a list of all areas.
+        The API returns a dictionary containing the areas, which is then converted to a list and returned by this function.
+    """
     r = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
     data = r.json()
     areas = data['meals']
@@ -139,7 +151,19 @@ def list_all_areas() -> list:
     return list(areas)
 
 def list_all_ingredients() -> list:
-    
+    """
+    Retrieves a list of all ingredients from the MealDB API.
+
+    Returns:
+        list: A list of dictionaries containing the ingredients.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to retrieve a list of all ingredients.
+        The API returns a dictionary containing the ingredients, which is then converted to a list and returned by this function.
+    """
     r = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?i=list')
     data = r.json()
     ingredients = data['meals']
@@ -147,22 +171,49 @@ def list_all_ingredients() -> list:
     return list(ingredients)
 
 def list_all() -> list:
-    
-     r1 = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
-     data1 = r1.json()
+    """
+    Retrieves a list of all categories, areas, and ingredients from the MealDB API.
 
-     r2 = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
-     data2 = r2.json()
+    Returns:
+        list: A list of dictionaries containing the categories, areas, and ingredients.
 
-     r3 = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?i=list')
-     data3 = r3.json()
+    Raises:
+        httpx.HTTPError: If any of the API requests fail.
 
-     answers = [data1, data2, data3]
+    Notes:
+        This function uses the MealDB API to retrieve a list of all categories, areas, and ingredients.
+        The API returns a dictionary containing the categories, areas, and ingredients, which are then combined into a list and returned by this function.
+    """
+    r1 = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
+    data1 = r1.json()
 
-     return answers
+    r2 = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
+    data2 = r2.json()
+
+    r3 = httpx.get('https://www.themealdb.com/api/json/v1/1/list.php?i=list')
+    data3 = r3.json()
+
+    answers = [data1, data2, data3]
+
+    return answers
 
 def filter_by_ingredient(ingredient) -> list:
+    """
+    Retrieves a list of meals that include a specific ingredient from the MealDB API.
 
+    Args:
+        ingredient (str): The ingredient to filter by.
+
+    Returns:
+        list: A list of dictionaries containing the meals that include the specified ingredient.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to retrieve a list of meals that include a specific ingredient.
+        The API returns a dictionary containing the meals, which is then converted to a list and returned by this function.
+    """
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/filter.php?i={ingredient}')
     data = r.json()
     meal = data['meals']
@@ -170,7 +221,22 @@ def filter_by_ingredient(ingredient) -> list:
     return list(meal)
 
 def filter_by_category(category) -> list:
+    """
+    Retrieves a list of meals that belong to a specific category from the MealDB API.
 
+    Args:
+        category (str): The category to filter by.
+
+    Returns:
+        list: A list of dictionaries containing the meals that belong to the specified category.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to retrieve a list of meals that belong to a specific category.
+        The API returns a dictionary containing the meals, which is then converted to a list and returned by this function.
+    """
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/filter.php?c={category}')
     data = r.json()
     meal = data['meals']
@@ -178,7 +244,22 @@ def filter_by_category(category) -> list:
     return list(meal)
 
 def filter_by_area(area) -> list:
+    """
+    Retrieves a list of meals that originate from a specific area from the MealDB API.
 
+    Args:
+        area (str): The area to filter by.
+
+    Returns:
+        list: A list of dictionaries containing the meals that originate from the specified area.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to retrieve a list of meals that originate from a specific area.
+        The API returns a dictionary containing the meals, which is then converted to a list and returned by this function.
+    """
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/filter.php?a={area}')
     data = r.json()
     meal = data['meals']
