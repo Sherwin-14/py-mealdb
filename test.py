@@ -1,6 +1,6 @@
 import mealdb as mb
 
-meal = mb.list_all_areas()
+meal = mb.get_meal_by_name("Blini Pancakes")
 
 #print(meal)
 print(meal)

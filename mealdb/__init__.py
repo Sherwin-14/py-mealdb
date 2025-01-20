@@ -5,7 +5,7 @@ def get_meal_by_name(name) -> list:
     Retrieves a list of meals by name from the MealDB API.
 
     Args:
-        name (str): The name of the meal to search for.
+        name (str): The name of the meal to search for. (e.g. Arrabiata, Potato Salad, Blini Pancakes).
 
     Returns:
         list: A list of meals matching the search query.
@@ -52,7 +52,7 @@ def meal_details_by_id(id) -> list:
     Retrieves the details of a meal by its ID from the MealDB API.
 
     Args:
-        id (int): The ID of the meal to retrieve.
+        id (int): The ID of the meal to retrieve. (e.g. 52772).
 
     Returns:
         list: A list containing the details of the meal.
@@ -202,7 +202,7 @@ def filter_by_ingredient(ingredient) -> list:
     Retrieves a list of meals that include a specific ingredient from the MealDB API.
 
     Args:
-        ingredient (str): The ingredient to filter by.
+        ingredient (str): The ingredient to filter by (e.g. Chicken, Salmon, Beef).
 
     Returns:
         list: A list of dictionaries containing the meals that include the specified ingredient.
@@ -248,7 +248,7 @@ def filter_by_area(area) -> list:
     Retrieves a list of meals that originate from a specific area from the MealDB API.
 
     Args:
-        area (str): The area to filter by.
+        area (str): The area to filter by (e.g. Canadian, Mexican).
 
     Returns:
         list: A list of dictionaries containing the meals that originate from the specified area.
