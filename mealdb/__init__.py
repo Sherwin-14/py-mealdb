@@ -1,8 +1,22 @@
 import httpx
 
-
 def get_meal_by_name(name):  
+    """
+    Retrieves a list of meals by name from the MealDB API.
 
+    Args:
+        name (str): The name of the meal to search for.
+
+    Returns:
+        list: A list of meals matching the search query.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to search for meals by name.
+        The API returns a list of meals, which is then returned by this function.
+    """
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/search.php?s={name}')
     data = r.json()
     meal = data['meals']
@@ -10,7 +24,22 @@ def get_meal_by_name(name):
 
 
 def list_all_meals(letter):
+    """
+    Retrieves a list of meals starting with a specific letter from the MealDB API.
 
+    Args:
+        letter (str): The letter to search for (e.g. 'a', 'b', etc.).
+
+    Returns:
+        list: A list of meals starting with the specified letter.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to search for meals by letter.
+        The API returns a list of meals, which is then returned by this function.
+    """
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/search.php?f={letter}')
     data = r.json()
     meals = data['meals']
@@ -19,6 +48,22 @@ def list_all_meals(letter):
 
 
 def meal_details_by_id(id):
+    """
+    Retrieves the details of a meal by its ID from the MealDB API.
+
+    Args:
+        id (int): The ID of the meal to retrieve.
+
+    Returns:
+        list: A list containing the details of the meal.
+
+    Raises:
+        httpx.HTTPError: If the API request fails.
+
+    Notes:
+        This function uses the MealDB API to retrieve the details of a meal by its ID.
+        The API returns a list containing the meal details, which is then returned by this function.
+    """
 
     r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/lookup.php?i={id}')
     data = r.json()
