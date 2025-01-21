@@ -5,33 +5,45 @@ project:
 website:
       title: "py-mealdb"
       site-url: https://kapitan.net
-      search:
-          location: sidebar
       sidebar:
           style: docked  
-          collapse-level: 1
           background: '#008080'
           tools:
             - icon: github
               href: https://github.com/Sherwin-14/py-mealdb
           contents:
-            - section: "API Reference"
-              contents: about.qmd
+            - text: "Home" 
+              href: index.qmd
+            - text: "API Reference"
+              href: about.qmd
+            - text: "Contributing Guide"
+              href: contributing.qmd
 quartodoc:
-      package: quartodoc
+      style: pkgdown
+      dir: about.md
+      package: ./mealdb.__init__.py
       sections:
-        - title: Some functions
+        - title: 
           desc: Functions to inspect docstrings.
           contents:
-            # the functions being documented in the package.
-            # you can refer to anything: class methods, modules, etc..
-            - get_object
-            - preview
+            - get_meal_by_name
+            - meal_details_by_id
+            - single_random_meal
+            - list_all_meals
+            - list_meal_categories
+            - list_all_categories
+            - list_all_areas
+            - list_all_ingredients
+            - list_all
+            - filter_by_ingredient
+            - filter_by_category
+            - filter_by_area
 
 format:
   html:
     theme: darkly
-    css: styles.css
+    css: styles.scss
+
 
 
 

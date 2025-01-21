@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kapitan.net/about.html</loc>
-    <lastmod>2025-01-21T09:25:20.526Z</lastmod>
+    <loc>https://kapitan.net/contributing.html</loc>
+    <lastmod>2025-01-21T14:59:46.867Z</lastmod>
   </url>
   <url>
     <loc>https://kapitan.net/index.html</loc>
-    <lastmod>2025-01-21T09:57:28.689Z</lastmod>
+    <lastmod>2025-01-21T16:34:21.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/about.html</loc>
+    <lastmod>2025-01-21T09:25:20.526Z</lastmod>
   </url>
   <url>
     <loc>https://kapitan.net/license.html</loc>
