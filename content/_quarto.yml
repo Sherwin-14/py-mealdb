@@ -7,15 +7,16 @@ website:
       site-url: https://kapitan.net
       search:
           location: sidebar
-
       sidebar:
           style: docked  
           collapse-level: 1
-          background: light
+          background: '#008080'
           tools:
             - icon: github
               href: https://github.com/Sherwin-14/py-mealdb
-
+          contents:
+            - section: "API Reference"
+              contents: about.qmd
 quartodoc:
       package: quartodoc
       sections:
