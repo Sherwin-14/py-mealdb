@@ -17,6 +17,20 @@ website:
               href: https://github.com/Sherwin-14/py-mealdb
 
 quartodoc:
+      package: quartodoc
+      sections:
+        - title: Some functions
+          desc: Functions to inspect docstrings.
+          contents:
+            # the functions being documented in the package.
+            # you can refer to anything: class methods, modules, etc..
+            - get_object
+            - preview
+
+format:
+  html:
+    theme: darkly
+    css: styles.css
 
 
 

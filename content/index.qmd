@@ -7,8 +7,8 @@ The MealDB Python Library provides seamless access to The MealDB API, enabling d
 ```py
 from mealdb import MealDB
 
-meal_db = MealDB(1)  
-meal = meal_db.get_meal_by_name('Chicken')
+mb = MealDB(API_KEY)
+meal = mb.get_meal_by_name('Potato Salad')
 print(meal)
 ```
 
