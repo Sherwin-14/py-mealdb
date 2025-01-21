@@ -61,3 +61,15 @@ class TestMealDB(unittest.TestCase):
         response = self.meal_db.filter_by_ingredient(ingredient)
         self.assertIsInstance(response, list)
         self.assertGreater(len(response), 0)
+
+     def test_filter_by_category(self):
+        category = 'Seafood'
+        response = self.meal_db.filter_by_category(category)
+        self.assertIsInstance(response, list)
+        self.assertGreater(len(response), 0)
+
+     def test_filter_by_area(self):
+        area = 'Canadian'
+        response = self.meal_db.filter_by_area(area)
+        self.assertIsInstance(response, list)
+        self.assertGreater(len(response), 0)
