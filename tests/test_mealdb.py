@@ -73,3 +73,12 @@ class TestMealDB(unittest.TestCase):
         response = self.meal_db.filter_by_area(area)
         self.assertIsInstance(response, list)
         self.assertGreater(len(response), 0)
+
+     def test_single_random_meal_error(self):
+        with unittest.mock.patch('httpx.get') as mock_get:
+            mock_get.side_effect = httpx.HTTPError
+            with self.assertRaises(httpx.HTTPError):
+                self.meal_db.single_random_meal()
+
+if __name__ == '__main__':
+    unittest.main()
