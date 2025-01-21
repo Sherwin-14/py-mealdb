@@ -10,9 +10,9 @@ jobs:
         runs-on:  ubuntu-latest
         
          defaults:
-         run:
-           working-directory: tests
-
+            run:
+              working-directory: tests
+              
          steps:
            - uses: actions/checkout@v4
            - name: Setup Python 3.11
