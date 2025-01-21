@@ -1,9 +1,29 @@
 name: Check Meal DB API
 
 on:
+  schedule:
+    - cron: "30 23 * * *"
+  workflow_dispatch:
 
 jobs:
     run-unit-tests:
-        runs-on: ubuntu-latest
-        steps:
-          - name: 
+        runs-on:  ubuntu-latest
+        
+         defaults:
+         run:
+           working-directory: tests
+
+         steps:
+           - uses: actions/checkout@v4
+           - name: Setup Python 3.11
+             uses: actions/setup-python@v5
+             with:
+                   python-version: '3.11' 
+           - run: |
+                   python -m pip install --upgrade pip
+                   pip install httpx
+                   pip install unittest
+
+           - name: Run tests
+             run: python test_mealdb.py
+
