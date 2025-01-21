@@ -1,0 +1,23 @@
+# The MealDB Python Library
+
+The MealDB Python Library provides seamless access to The MealDB API, enabling developers to integrate a rich database of meal recipes into their applications. The library is designed for Python, making it easy to incorporate meal data into your projects.
+
+## Get Started
+
+```py
+from mealdb import MealDB
+
+meal_db = MealDB(1)  
+meal = meal_db.get_meal_by_name('Chicken')
+print(meal)
+```
+
+## Contributing
+We appreciate all contributions, from reporting bugs to implementing new features. Read our contributing guide to learn more.
+
+
+## License
+This project is licensed under the terms of the CC-BY-NC-SA-4.0.
+
+
+

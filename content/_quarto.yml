@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+      title: "py-mealdb"
+      site-url: https://kapitan.net
+      search:
+          location: sidebar
+
+      sidebar:
+          style: docked  
+          collapse-level: 1
+          background: light
+          tools:
+            - icon: github
+              href: https://github.com/Sherwin-14/py-mealdb
+
+quartodoc:
+
+
+
