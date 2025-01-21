@@ -1,5 +1,6 @@
 import unittest
 import httpx
+from unittest import mock
 from mealdb import MealDB 
 
 class TestMealDB(unittest.TestCase):
@@ -33,7 +34,7 @@ class TestMealDB(unittest.TestCase):
 
      def test_list_meal_categories(self):
         response = self.meal_db.list_meal_categories()
-        self.assertIsInstance(response, dict)
+        self.assertIsInstance(response, list)
         self.assertGreater(len(response), 0)
 
      def test_list_all_categories(self):
@@ -76,7 +77,7 @@ class TestMealDB(unittest.TestCase):
 
      def test_single_random_meal_error(self):
         with unittest.mock.patch('httpx.get') as mock_get:
-            mock_get.side_effect = httpx.HTTPError
+            mock_get.side_effect = httpx.HTTPError("Mocked HTTP error")
             with self.assertRaises(httpx.HTTPError):
                 self.meal_db.single_random_meal()
 

@@ -46,13 +46,13 @@ class MealDB:
             This function uses the MealDB API to retrieve the details of a meal by its ID.
             The API returns a list containing the meal details, which is then returned by this function.
         """
-        r = httpx.get(f'https://www.themealdb.com/api/json/v1/1/lookup.php?i={id}')
+        r = httpx.get(f'{self.base_url}/lookup.php?i={id}')
         data = r.json()
         meal = data['meals']
         
         return list(meal)
 
-    def single_random_meal() -> list:
+    def single_random_meal(self) -> list:
         """
         Retrieves a single random meal from the MealDB API.
 
@@ -66,7 +66,7 @@ class MealDB:
             This function uses the MealDB API to retrieve a single random meal.
             The API returns a list containing the meal details, which is then returned by this function.
         """
-        r = httpx.get('{self.base_url}/random.php')
+        r = httpx.get(f'{self.base_url}/random.php')
         data = r.json()
         meal = data['meals']
         
@@ -96,7 +96,7 @@ class MealDB:
         return list(meals)
 
 
-    def list_meal_categories() -> list:
+    def list_meal_categories(self) -> list:
         """
         Retrieves a list of meal categories from the MealDB API.
 
@@ -110,13 +110,13 @@ class MealDB:
             This function uses the MealDB API to retrieve a list of meal categories.
             The API returns a dictionary containing the categories, which is then returned by this function.
         """
-        r = httpx.get('{self.base_url}/categories.php')
+        r = httpx.get(f'{self.base_url}/categories.php')
         data = r.json()
-        meal = data['meals']
+        categories = data['categories']
         
-        return r.json()
+        return list(categories)
 
-    def list_all_categories() -> list:
+    def list_all_categories(self) -> list:
         """
         Retrieves a list of all categories from the MealDB API.
 
@@ -130,12 +130,12 @@ class MealDB:
             This function uses the MealDB API to retrieve a list of all categories.
             The API returns a dictionary containing the categories, which is then converted to a list and returned by this function.
         """
-        r = httpx.get('{self.base_url}/categories.php')
+        r = httpx.get(f'{self.base_url}/categories.php')
         data = r.json()
         
         return list(data)
 
-    def list_all_areas() -> list:
+    def list_all_areas(self) -> list:
         """
         Retrieves a list of all areas from the MealDB API.
 
@@ -149,13 +149,13 @@ class MealDB:
             This function uses the MealDB API to retrieve a list of all areas.
             The API returns a dictionary containing the areas, which is then converted to a list and returned by this function.
         """
-        r = httpx.get('{self.base_url}/list.php?a=list')
+        r = httpx.get(f'{self.base_url}/list.php?a=list')
         data = r.json()
         areas = data['meals']
         
         return list(areas)
 
-    def list_all_ingredients() -> list:
+    def list_all_ingredients(self) -> list:
         """
         Retrieves a list of all ingredients from the MealDB API.
 
@@ -169,13 +169,13 @@ class MealDB:
             This function uses the MealDB API to retrieve a list of all ingredients.
             The API returns a dictionary containing the ingredients, which is then converted to a list and returned by this function.
         """
-        r = httpx.get('{self.base_url}/list.php?i=list')
+        r = httpx.get(f'{self.base_url}/list.php?i=list')
         data = r.json()
         ingredients = data['meals']
         
         return list(ingredients)
 
-    def list_all() -> list:
+    def list_all(self) -> list:
         """
         Retrieves a list of all categories, areas, and ingredients from the MealDB API.
 
@@ -189,13 +189,13 @@ class MealDB:
             This function uses the MealDB API to retrieve a list of all categories, areas, and ingredients.
             The API returns a dictionary containing the categories, areas, and ingredients, which are then combined into a list and returned by this function.
         """
-        r1 = httpx.get('{self.base_url}/list.php?c=list')
+        r1 = httpx.get(f'{self.base_url}/list.php?c=list')
         data1 = r1.json()
-
-        r2 = httpx.get('{self.base_url}/list.php?a=list')
+        
+        r2 = httpx.get(f'{self.base_url}/list.php?a=list')
         data2 = r2.json()
 
-        r3 = httpx.get('{self.base_url}/list.php?i=list')
+        r3 = httpx.get(f'{self.base_url}/list.php?i=list')
         data3 = r3.json()
 
         answers = [data1, data2, data3]
