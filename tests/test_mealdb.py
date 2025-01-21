@@ -30,3 +30,34 @@ class TestMealDB(unittest.TestCase):
         response = self.meal_db.list_all_meals(letter)
         self.assertIsInstance(response, list)
         self.assertGreater(len(response), 0)
+
+     def test_list_meal_categories(self):
+        response = self.meal_db.list_meal_categories()
+        self.assertIsInstance(response, dict)
+        self.assertGreater(len(response), 0)
+
+     def test_list_all_categories(self):
+        response = self.meal_db.list_all_categories()
+        self.assertIsInstance(response, list)
+        self.assertGreater(len(response), 0)
+
+     def test_list_all_areas(self):
+        response = self.meal_db.list_all_areas()
+        self.assertIsInstance(response, list)
+        self.assertGreater(len(response), 0)
+
+     def test_list_all_ingredients(self):
+        response = self.meal_db.list_all_ingredients()
+        self.assertIsInstance(response, list)
+        self.assertGreater(len(response), 0)
+
+     def test_list_all(self):
+        response = self.meal_db.list_all()
+        self.assertIsInstance(response, list)
+        self.assertGreater(len(response), 0)
+
+     def test_filter_by_ingredient(self):
+        ingredient = 'Chicken'
+        response = self.meal_db.filter_by_ingredient(ingredient)
+        self.assertIsInstance(response, list)
+        self.assertGreater(len(response), 0)
