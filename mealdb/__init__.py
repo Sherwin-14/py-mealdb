@@ -1,9 +1,6 @@
 import httpx
 import matplotlib.pyplot as plt
 
-from PIL import Image
-from io import BytesIO
-
 class MealDB:
 
     def __init__(self, api_key):
@@ -296,30 +293,21 @@ class MealDB:
         
         return list(meal)
     
-class Images:
-
-    def __init__(self,ingredient):
-
-        self.base_url = f'https://www.themealdb.com/images/ingredients/{ingredient}.png'
-
-    def get_ingredient_image(self) -> Image:
-        r =  httpx.get(self.base_url)
-        image_data = r.content
-        try:
-            image = Image.open(BytesIO(image_data))
-            plt.imshow(image)
-            plt.show()
-        except PIL.UnidentifiedImageError as e:
-            print(f"Error: {e}")
-            return None
+    def get_ingredient_image(self,ingredient) -> any:
         
-    def get_ingredient_image_small(self) -> Image:
-        r =  httpx.get(self.base_url)
+        r =  httpx.get(f'https://www.themealdb.com/images/ingredients/{ingredient}.png')
         image_data = r.content
-        try:
-            image = Image.open(BytesIO(image_data))
-            plt.imshow(image)
-            plt.show()
-        except PIL.UnidentifiedImageError as e:
-            print(f"Error: {e}")
-            return None
+        with open(f'{ingredient}.png', 'wb') as file:
+            file.write(image_data)
+    
+        return "Fetched Image Successfully"
+        
+    def get_ingredient_image_small(self,ingredient) -> any:
+        r =  httpx.get( f'https://www.themealdb.com/images/ingredients/{ingredient}-Small.png')
+        image_data = r.content
+        with open(f'{ingredient}-small.png', 'wb') as file:
+            file.write(image_data)
+    
+        return "Fetched Image Successfully"
+    
+    
