@@ -27,7 +27,29 @@ class MealDB:
         data = r.json()
         meal = data['meals']
         return list(meal)
+    
+    def get_latest_meal(self) -> list:
+        """
+        Retrieves the latest meal data from the API.
 
+        Makes a GET request to the 'latest.php' endpoint and returns the meal data as a list.
+
+        Returns:
+            list: A list containing the latest meal data.
+
+        Raises:
+            httpx.HTTPError: If the API request fails.
+
+        Notes:
+             This function uses the MealDB API to search for latest meal.
+        """
+        r = httpx.get(f'{self.base_url}/latest.php')
+        if r.status_code == 403:
+            return "You need to subscribe to The Meal DB API to access this endpoint"
+        else:
+            data = r.json()
+            meal = data['meals']
+            return list(meal)
 
     def meal_details_by_id(self,id) -> list:
         """
@@ -71,6 +93,7 @@ class MealDB:
         meal = data['meals']
         
         return list(meal)
+
 
     def list_all_meals(self,letter) -> list:
         """
@@ -224,6 +247,16 @@ class MealDB:
         meal = data['meals']
         
         return list(meal)
+    
+    def filter_by_multi_ingredient(self,ingredients:list) -> list:
+        
+
+        r = httpx.get(f'{self.base_url}/filter.php?i={ingredient}')
+        data = r.json()
+        meal = data['meals']
+        
+        return list(meal)
+
 
     def filter_by_category(self,category) -> list:
         """
