@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from io import BytesIO
 
-
 class MealDB:
 
     def __init__(self, api_key):
@@ -300,6 +299,19 @@ class MealDB:
     def get_ingredient_image(self,ingredient) -> Image:
         
         url = f'https://www.themealdb.com/images/ingredients/{ingredient}.png'
+        r =  httpx.get(url)
+        image_data = r.content
+        try:
+            image = Image.open(BytesIO(image_data))
+            plt.imshow(image)
+            plt.show()
+        except PIL.UnidentifiedImageError as e:
+            print(f"Error: {e}")
+            return None
+        
+    def get_small_ingredient_image(self,ingredient) -> Image:
+        
+        url = f'https://www.themealdb.com/images/ingredients/{ingredient}-Small.png'
         r =  httpx.get(url)
         image_data = r.content
         try:
