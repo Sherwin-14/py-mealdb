@@ -80,6 +80,24 @@ class TestMealDB(unittest.TestCase):
             mock_get.side_effect = httpx.HTTPError("Mocked HTTP error")
             with self.assertRaises(httpx.HTTPError):
                 self.meal_db.single_random_meal()
+     
+     def test_get_latest_meal(self):
+         response = self.meal_db.get_latest_meal()
+         self.assertIsInstance(response, list)
+         self.assertGreater(len(response), 0)
+
+     def test_get_latest_meal_subscription_required(self):
+         with unittest.mock.patch('httpx.get') as mock_get:
+            mock_data = {'meals': [1, 2, 3]}
+            mock_get.return_value.json.return_value = mock_data
+            response = self.meal_db.get_latest_meal()
+            self.assertEqual(response, "You need to subscribe to The Meal DB API to access this endpoint")
+
+     def test_get_latest_meal_error(self):
+         with unittest.mock.patch('httpx.get') as mock_get:
+            mock_get.side_effect = httpx.HTTPError("Mocked HTTP error")
+            with self.assertRaises(httpx.HTTPError):
+                  self.meal_db.get_latest_meal()
 
 if __name__ == '__main__':
     unittest.main()
