@@ -4,7 +4,6 @@ project:
 
 website:
       title: "py-mealdb"
-      site-url: https://py-mealdb.com
       sidebar:
           style: docked  
           background: '#008080'
