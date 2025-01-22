@@ -42,13 +42,13 @@ class MealDB:
              This function uses the MealDB API to search for latest meal.
         """
         r = httpx.get(f'{self.base_url}/latest.php')
-        if r.status_code == 403:
+        data = r.json()
+        meal = data['meals']
+        if len(meal) == 3:
             return "You need to subscribe to The Meal DB API to access this endpoint"
         else:
-            data = r.json()
-            meal = data['meals']
             return list(meal)
-
+           
     def meal_details_by_id(self,id) -> list:
         """
         Retrieves the details of a meal by its ID from the MealDB API.
@@ -245,7 +245,7 @@ class MealDB:
         meal = data['meals']
         
         return list(meal)
-
+    
     def filter_by_category(self,category) -> list:
         """
         Retrieves a list of meals that belong to a specific category from the MealDB API.
