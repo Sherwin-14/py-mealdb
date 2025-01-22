@@ -9,6 +9,66 @@
     <lastmod>2025-01-21T16:34:21.035Z</lastmod>
   </url>
   <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.list_all_meals.html</loc>
+    <lastmod>2025-01-22T08:41:05.904Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.list_meal_categories.html</loc>
+    <lastmod>2025-01-22T08:41:05.908Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.filter_by_category.html</loc>
+    <lastmod>2025-01-22T08:41:05.860Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.list_all_areas.html</loc>
+    <lastmod>2025-01-22T08:41:05.888Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.filter_by_area.html</loc>
+    <lastmod>2025-01-22T08:41:05.852Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.list_all_categories.html</loc>
+    <lastmod>2025-01-22T08:41:05.892Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/index.html</loc>
+    <lastmod>2025-01-22T08:41:05.824Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.filter_by_ingredient.html</loc>
+    <lastmod>2025-01-22T08:41:05.864Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.meal_details_by_id.html</loc>
+    <lastmod>2025-01-22T08:41:05.916Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.single_random_meal.html</loc>
+    <lastmod>2025-01-22T08:41:05.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.list_all_ingredients.html</loc>
+    <lastmod>2025-01-22T08:41:05.896Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.get_meal_by_name.html</loc>
+    <lastmod>2025-01-22T08:41:05.876Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.list_all.html</loc>
+    <lastmod>2025-01-22T08:41:05.884Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/MealDB.html</loc>
+    <lastmod>2025-01-22T08:30:25.280Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kapitan.net/reference/mealdb.MealDB.get_latest_meal.html</loc>
+    <lastmod>2025-01-22T08:41:05.872Z</lastmod>
+  </url>
+  <url>
     <loc>https://kapitan.net/about.html</loc>
     <lastmod>2025-01-21T09:25:20.526Z</lastmod>
   </url>

@@ -1,0 +1,25 @@
+# filter_by_category { #mealdb.MealDB.filter_by_category }
+
+```python
+MealDB.filter_by_category(category)
+```
+
+Retrieves a list of meals that belong to a specific category from the MealDB API.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name     | Type   | Description                               | Default    |
+|----------|--------|-------------------------------------------|------------|
+| category | str    | The category to filter by. (e.g. Seafood) | _required_ |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description                                                                        |
+|--------|--------|------------------------------------------------------------------------------------|
+| list   | list   | A list of dictionaries containing the meals that belong to the specified category. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type            | Description               |
+|--------|-----------------|---------------------------|
+|        | httpx.HTTPError | If the API request fails. |

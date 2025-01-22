@@ -1,0 +1,25 @@
+# filter_by_ingredient { #mealdb.MealDB.filter_by_ingredient }
+
+```python
+MealDB.filter_by_ingredient(ingredient)
+```
+
+Retrieves a list of meals that include a specific ingredient from the MealDB API.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name       | Type   | Description                                               | Default    |
+|------------|--------|-----------------------------------------------------------|------------|
+| ingredient | str    | The ingredient to filter by (e.g. Chicken, Salmon, Beef). | _required_ |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description                                                                        |
+|--------|--------|------------------------------------------------------------------------------------|
+| list   | list   | A list of dictionaries containing the meals that include the specified ingredient. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type            | Description               |
+|--------|-----------------|---------------------------|
+|        | httpx.HTTPError | If the API request fails. |

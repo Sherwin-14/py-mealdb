@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>contributing – py-mealdb</title>
+<title>mealdb.mealdb.filter_by_area – py-mealdb</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.scss">
+<link rel="stylesheet" href="../styles.scss">
 </head>
 
 <body class="nav-sidebar docked fullcontent">
@@ -80,7 +114,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./contributing.html">Contributing Guide</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      py-mealdb
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -95,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">py-mealdb</a> 
+      <a href="../">py-mealdb</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/Sherwin-14/py-mealdb" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
@@ -110,19 +146,19 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">API Reference</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing.html" class="sidebar-item-text sidebar-link active">
+  <a href="../contributing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributing Guide</span></a>
   </div>
 </li>
@@ -138,31 +174,83 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="contributing-guide" class="level1">
-<h1>Contributing Guide</h1>
-<p>Thank you for your interest in contributing to The MealDB Python Library! We welcome contributions from everyone, and we’re excited to collaborate with you. This guide will help you understand how to get involved.</p>
-<section id="reporting-issues" class="level2">
-<h2 class="anchored" data-anchor-id="reporting-issues">Reporting Issues</h2>
-<p>If you encounter any issues or bugs, please report them by opening an issue on our GitHub repository.</p>
-<p>When reporting an issue, please include:</p>
-<ol type="1">
-<li><p>A clear and descriptive title.</p></li>
-<li><p>A detailed description of the issue.</p></li>
-<li><p>Any relevant screenshots or error messages.</p></li>
-</ol>
+<section id="mealdb.MealDB.filter_by_area" class="level1">
+<h1>filter_by_area</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>MealDB.filter_by_area(area)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Retrieves a list of meals that originate from a specific area from the MealDB API.</p>
+<section id="parameters" class="level2 doc-section doc-section-parameters">
+<h2 class="doc-section doc-section-parameters anchored" data-anchor-id="parameters">Parameters</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 63%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>area</td>
+<td>str</td>
+<td>The area to filter by (e.g.&nbsp;Canadian, Mexican).</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="suggesting-features" class="level2">
-<h2 class="anchored" data-anchor-id="suggesting-features">Suggesting Features</h2>
-<p>We value your ideas! If you have a feature request, please open an issue and describe:</p>
-<ol type="1">
-<li><p>The feature you would like to see.</p></li>
-<li><p>Why this feature would be useful.</p></li>
-<li><p>Any examples or use cases.</p></li>
-</ol>
+<section id="returns" class="level2 doc-section doc-section-returns">
+<h2 class="doc-section doc-section-returns anchored" data-anchor-id="returns">Returns</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 84%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>list</td>
+<td>list</td>
+<td>A list of dictionaries containing the meals that originate from the specified area.</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="reviewing-code" class="level2">
-<h2 class="anchored" data-anchor-id="reviewing-code">Reviewing Code</h2>
-<p>We review pull requests regularly. Our review process ensures that the codebase remains clean, maintainable, and aligned with project goals. Please be patient as we review your contribution.</p>
+<section id="raises" class="level2 doc-section doc-section-raises">
+<h2 class="doc-section doc-section-raises anchored" data-anchor-id="raises">Raises</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>httpx.HTTPError</td>
+<td>If the API request fails.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="notes" class="level2 doc-section doc-section-notes">
+<h2 class="doc-section doc-section-notes anchored" data-anchor-id="notes">Notes</h2>
+<p>This function uses the MealDB API to retrieve a list of meals that originate from a specific area. The API returns a dictionary containing the meals, which is then converted to a list and returned by this function.</p>
 
 
 </section>
