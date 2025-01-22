@@ -14,6 +14,6 @@ Retrieves a list of all categories from the MealDB API.
 
 ## Raises {.doc-section .doc-section-raises}
 
-| Name   | Type            | Description               |
-|--------|-----------------|---------------------------|
-|        | httpx.HTTPError | If the API request fails. |
+| Name   | Type            | Description                                              |
+|--------|-----------------|----------------------------------------------------------|
+|        | httpx.HTTPError | Check httpx's documentation for all possible exceptions. |

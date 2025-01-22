@@ -1,1 +1,0 @@
-Sitemap: https://py-mealdb.com/sitemap.xml

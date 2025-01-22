@@ -84,7 +84,7 @@
     "href": "reference/mealdb.MealDB.list_all_meals.html",
     "title": "list_all_meals",
     "section": "",
-    "text": "MealDB.list_all_meals(letter)\nRetrieves a list of meals starting with a specific letter from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nletter\nstr\nThe letter to search for (e.g. ‘a’, ‘b’, etc.).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of meals starting with the specified letter.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.list_all_meals(letter)\nRetrieves a list of meals starting with a specific letter from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nletter\nstr\nThe letter to search for (e.g. ‘a’, ‘b’, etc.).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of meals starting with the specified letter.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.list_all_meals.html#parameters",
@@ -105,7 +105,7 @@
     "href": "reference/mealdb.MealDB.list_all_meals.html#raises",
     "title": "list_all_meals",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.get_ingredient_image_small.html",
@@ -140,7 +140,7 @@
     "href": "reference/mealdb.MealDB.list_meal_categories.html",
     "title": "list_meal_categories",
     "section": "",
-    "text": "MealDB.list_meal_categories()\nRetrieves a list of meal categories from the MealDB API.\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\ndict\nlist\nA dictionary containing the list of meal categories.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.list_meal_categories()\nRetrieves a list of meal categories from the MealDB API.\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\ndict\nlist\nA dictionary containing the list of meal categories.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.list_meal_categories.html#returns",
@@ -154,14 +154,14 @@
     "href": "reference/mealdb.MealDB.list_meal_categories.html#raises",
     "title": "list_meal_categories",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.filter_by_category.html",
     "href": "reference/mealdb.MealDB.filter_by_category.html",
     "title": "filter_by_category",
     "section": "",
-    "text": "MealDB.filter_by_category(category)\nRetrieves a list of meals that belong to a specific category from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ncategory\nstr\nThe category to filter by. (e.g. Seafood)\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the meals that belong to the specified category.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.filter_by_category(category)\nRetrieves a list of meals that belong to a specific category from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ncategory\nstr\nThe category to filter by. (e.g. Seafood)\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the meals that belong to the specified category.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.filter_by_category.html#parameters",
@@ -182,14 +182,14 @@
     "href": "reference/mealdb.MealDB.filter_by_category.html#raises",
     "title": "filter_by_category",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.list_all_areas.html",
     "href": "reference/mealdb.MealDB.list_all_areas.html",
     "title": "list_all_areas",
     "section": "",
-    "text": "MealDB.list_all_areas()\nRetrieves a list of all areas from the MealDB API.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the areas.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.list_all_areas()\nRetrieves a list of all areas from the MealDB API.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the areas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.list_all_areas.html#returns",
@@ -203,14 +203,14 @@
     "href": "reference/mealdb.MealDB.list_all_areas.html#raises",
     "title": "list_all_areas",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.filter_by_area.html",
     "href": "reference/mealdb.MealDB.filter_by_area.html",
     "title": "filter_by_area",
     "section": "",
-    "text": "MealDB.filter_by_area(area)\nRetrieves a list of meals that originate from a specific area from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\narea\nstr\nThe area to filter by (e.g. Canadian, Mexican).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the meals that originate from the specified area.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.filter_by_area(area)\nRetrieves a list of meals that originate from a specific area from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\narea\nstr\nThe area to filter by (e.g. Canadian, Mexican).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the meals that originate from the specified area.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.filter_by_area.html#parameters",
@@ -231,14 +231,14 @@
     "href": "reference/mealdb.MealDB.filter_by_area.html#raises",
     "title": "filter_by_area",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.list_all_categories.html",
     "href": "reference/mealdb.MealDB.list_all_categories.html",
     "title": "list_all_categories",
     "section": "",
-    "text": "MealDB.list_all_categories()\nRetrieves a list of all categories from the MealDB API.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the categories.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.list_all_categories()\nRetrieves a list of all categories from the MealDB API.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the categories.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.list_all_categories.html#returns",
@@ -252,7 +252,7 @@
     "href": "reference/mealdb.MealDB.list_all_categories.html#raises",
     "title": "list_all_categories",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/index.html",
@@ -266,7 +266,7 @@
     "href": "reference/mealdb.MealDB.filter_by_ingredient.html",
     "title": "filter_by_ingredient",
     "section": "",
-    "text": "MealDB.filter_by_ingredient(ingredient)\nRetrieves a list of meals that include a specific ingredient from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ningredient\nstr\nThe ingredient to filter by (e.g. Chicken, Salmon, Beef).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the meals that include the specified ingredient.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.filter_by_ingredient(ingredient)\nRetrieves a list of meals that include a specific ingredient from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ningredient\nstr\nThe ingredient to filter by (e.g. Chicken, Salmon, Beef).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the meals that include the specified ingredient.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.filter_by_ingredient.html#parameters",
@@ -287,14 +287,14 @@
     "href": "reference/mealdb.MealDB.filter_by_ingredient.html#raises",
     "title": "filter_by_ingredient",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.meal_details_by_id.html",
     "href": "reference/mealdb.MealDB.meal_details_by_id.html",
     "title": "meal_details_by_id",
     "section": "",
-    "text": "MealDB.meal_details_by_id(id)\nRetrieves the details of a meal by its ID from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nid\nint\nThe ID of the meal to retrieve. (e.g. 52772).\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list containing the details of the meal.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.meal_details_by_id(id)\nRetrieves the details of a meal by its ID from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nid\nint\nThe ID of the meal to retrieve. (e.g. 52772).\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list containing the details of the meal.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.meal_details_by_id.html#parameters",
@@ -315,14 +315,14 @@
     "href": "reference/mealdb.MealDB.meal_details_by_id.html#raises",
     "title": "meal_details_by_id",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.single_random_meal.html",
     "href": "reference/mealdb.MealDB.single_random_meal.html",
     "title": "single_random_meal",
     "section": "",
-    "text": "MealDB.single_random_meal()\nRetrieves a single random meal from the MealDB API.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list containing the details of a random meal.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.single_random_meal()\nRetrieves a single random meal from the MealDB API.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list containing the details of a random meal.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.single_random_meal.html#returns",
@@ -336,14 +336,14 @@
     "href": "reference/mealdb.MealDB.single_random_meal.html#raises",
     "title": "single_random_meal",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.list_all_ingredients.html",
     "href": "reference/mealdb.MealDB.list_all_ingredients.html",
     "title": "list_all_ingredients",
     "section": "",
-    "text": "MealDB.list_all_ingredients()\nRetrieves a list of all ingredients from the MealDB API.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the ingredients.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.list_all_ingredients()\nRetrieves a list of all ingredients from the MealDB API.\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of dictionaries containing the ingredients.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.list_all_ingredients.html#returns",
@@ -357,14 +357,14 @@
     "href": "reference/mealdb.MealDB.list_all_ingredients.html#raises",
     "title": "list_all_ingredients",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.get_meal_by_name.html",
     "href": "reference/mealdb.MealDB.get_meal_by_name.html",
     "title": "get_meal_by_name",
     "section": "",
-    "text": "MealDB.get_meal_by_name(name)\nRetrieves a list of meals by name from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nname\nstr\nThe name of the meal to search for. (e.g. Arrabiata, Potato Salad, Blini Pancakes).\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of meals matching the search query.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.get_meal_by_name(name)\nRetrieves a list of meals by name from the MealDB API.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nname\nstr\nThe name of the meal to search for. (e.g. Arrabiata, Potato Salad, Blini Pancakes).\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list of meals matching the search query.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.get_meal_by_name.html#parameters",
@@ -385,7 +385,7 @@
     "href": "reference/mealdb.MealDB.get_meal_by_name.html#raises",
     "title": "get_meal_by_name",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.list_all.html",
@@ -433,7 +433,7 @@
     "href": "reference/mealdb.MealDB.get_latest_meal.html",
     "title": "get_latest_meal",
     "section": "",
-    "text": "MealDB.get_latest_meal()\nRetrieves the latest meal data from the API.\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list containing the latest meal data, or a message indicating that the user needs to subscribe to access the endpoint.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "MealDB.get_latest_meal()\nRetrieves the latest meal data from the API.\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nlist\nlist\nA list containing the latest meal data, or a message indicating that the user needs to subscribe to access the endpoint.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.get_latest_meal.html#returns",
@@ -447,7 +447,7 @@
     "href": "reference/mealdb.MealDB.get_latest_meal.html#raises",
     "title": "get_latest_meal",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the API request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nCheck httpx’s documentation for all possible exceptions."
   },
   {
     "objectID": "reference/mealdb.MealDB.get_ingredient_image.html",

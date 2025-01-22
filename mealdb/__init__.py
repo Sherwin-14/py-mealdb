@@ -17,7 +17,7 @@ class MealDB:
             list: A list of meals matching the search query.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
 
         """
         r = httpx.get(f'{self.base_url}/search.php?s={name}')
@@ -33,7 +33,7 @@ class MealDB:
             list: A list containing the latest meal data, or a message indicating that the user needs to subscribe to access the endpoint.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/latest.php')
         data = r.json()
@@ -54,7 +54,7 @@ class MealDB:
             list: A list containing the details of the meal.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/lookup.php?i={id}')
         data = r.json()
@@ -70,7 +70,7 @@ class MealDB:
             list: A list containing the details of a random meal.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
 
         """
         r = httpx.get(f'{self.base_url}/random.php')
@@ -91,7 +91,7 @@ class MealDB:
             list: A list of meals starting with the specified letter.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/search.php?f={letter}')
         data = r.json()
@@ -108,7 +108,7 @@ class MealDB:
             dict: A dictionary containing the list of meal categories.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/categories.php')
         data = r.json()
@@ -124,7 +124,7 @@ class MealDB:
             list: A list of dictionaries containing the categories.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/categories.php')
         data = r.json()
@@ -139,7 +139,7 @@ class MealDB:
             list: A list of dictionaries containing the areas.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/list.php?a=list')
         data = r.json()
@@ -155,7 +155,7 @@ class MealDB:
             list: A list of dictionaries containing the ingredients.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/list.php?i=list')
         data = r.json()
@@ -197,7 +197,7 @@ class MealDB:
             list: A list of dictionaries containing the meals that include the specified ingredient.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/filter.php?i={ingredient}')
         data = r.json()
@@ -216,7 +216,7 @@ class MealDB:
             list: A list of dictionaries containing the meals that belong to the specified category.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/filter.php?c={category}')
         data = r.json()
@@ -235,7 +235,7 @@ class MealDB:
             list: A list of dictionaries containing the meals that originate from the specified area.
 
         Raises:
-            httpx.HTTPError: If the API request fails.
+            httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/filter.php?a={area}')
         data = r.json()
