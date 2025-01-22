@@ -1,4 +1,9 @@
 import httpx
+import matplotlib.pyplot as plt
+
+from PIL import Image
+from io import BytesIO
+
 
 class MealDB:
 
@@ -291,3 +296,16 @@ class MealDB:
         meal = data['meals']
         
         return list(meal)
+    
+    def get_ingredient_image(self,ingredient) -> Image:
+        
+        url = f'https://www.themealdb.com/images/ingredients/{ingredient}.png'
+        r =  httpx.get(url)
+        image_data = r.content
+        try:
+            image = Image.open(BytesIO(image_data))
+            plt.imshow(image)
+            plt.show()
+        except PIL.UnidentifiedImageError as e:
+            print(f"Error: {e}")
+            return None

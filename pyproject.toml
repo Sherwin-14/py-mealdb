@@ -16,6 +16,8 @@ httpx = "^0.28.1"
 ratelimit = "^2.2.1"
 quarto = "^0.1.0"
 quartodoc = "^0.9.1"
+pillow = "^11.1.0"
+matplotlib = "^3.10.0"
 
 
 [build-system]

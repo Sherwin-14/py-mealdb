@@ -21,7 +21,7 @@ website:
 quartodoc:
       style: pkgdown
       dir: about.md
-      package: ./mealdb.__init__.py
+      package: mealdb
       sections:
         - title: 
           desc: Functions to inspect docstrings.

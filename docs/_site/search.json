@@ -44,7 +44,7 @@
     "href": "index.html",
     "title": "The MealDB Python Library",
     "section": "",
-    "text": "The MealDB Python Library provides seamless access to The MealDB API, enabling developers to integrate a rich database of meal recipes into their applications. The library is designed for Python, making it easy to incorporate meal data into your projects.\n\n\nBefore getting started make sure that you have got your API_KEY from The Meal DB.\nfrom mealdb import MealDB\n\nmb = MealDB(API_KEY)\nmeal = mb.get_meal_by_name('Potato Salad')\nprint(meal)\n\n\n\nWe appreciate all contributions, from reporting bugs to implementing new features. Read our contributing guide to learn more.\n\n\n\nThis project is licensed under the terms of the CC-BY-NC-SA-4.0.",
+    "text": "The MealDB Python Library provides seamless access to The MealDB API, enabling developers to integrate a rich database of meal recipes into their applications. The library is designed for Python, making it easy to incorporate meal data into your projects.\n\n\nBefore getting started make sure that you have got your API_KEY from The Meal DB.\nfrom mealdb import MealDB\n\nmb = MealDB(API_KEY)\nmeal = mb.get_meal_by_name('Potato Salad')\n\nprint(meal)\n\n\n\nWe appreciate all contributions, from reporting bugs to implementing new features. Read our contributing guide to learn more.\n\n\n\nThis project is licensed under the terms of the CC-BY-NC-SA-4.0.",
     "crumbs": [
       "Home"
     ]
@@ -54,7 +54,7 @@
     "href": "index.html#get-started",
     "title": "The MealDB Python Library",
     "section": "",
-    "text": "Before getting started make sure that you have got your API_KEY from The Meal DB.\nfrom mealdb import MealDB\n\nmb = MealDB(API_KEY)\nmeal = mb.get_meal_by_name('Potato Salad')\nprint(meal)",
+    "text": "Before getting started make sure that you have got your API_KEY from The Meal DB.\nfrom mealdb import MealDB\n\nmb = MealDB(API_KEY)\nmeal = mb.get_meal_by_name('Potato Salad')\n\nprint(meal)",
     "crumbs": [
       "Home"
     ]
