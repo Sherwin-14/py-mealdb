@@ -8,7 +8,7 @@ py-mealdb is a Python library that allows users to interact effortlessly with Th
 
 ## Acknowledgment
 
-We would like to extend our sincere gratitude to TheMealDB for providing their comprehensive and free API. Their extensive database of meal recipes, ingredients, and detailed culinary information has been invaluable in the development of py-mealdb. Without their robust and accessible API, this project would not have been possible.
+I would like to extend our sincere gratitude to TheMealDB for providing their comprehensive and free API. Their extensive database of meal recipes, ingredients, and detailed culinary information has been invaluable in the development of py-mealdb. Without their robust and accessible API, this project would not have been possible.
 
 Thank you, TheMealDB, for your dedication to sharing the love of cooking and helping food enthusiasts around the world discover new and exciting recipes!
 
