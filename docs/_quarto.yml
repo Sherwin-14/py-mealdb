@@ -4,7 +4,7 @@ project:
 
 website:
       title: "py-mealdb"
-      site-url: https://kapitan.net
+      site-url: https://py-mealdb.com
       sidebar:
           style: docked  
           background: '#008080'
@@ -15,7 +15,7 @@ website:
             - text: "Home" 
               href: index.qmd
             - text: "API Reference"
-              href: reference/index.qmd
+              href: reference/MealDB.qmd
             - text: "Contributing Guide"
               href: contributing.qmd
 quartodoc:
@@ -33,6 +33,8 @@ quartodoc:
 
 format:
   html:
+    grid: 
+      body-width: 1200px
     theme: journal
     css: styles.scss
     page_layout: full

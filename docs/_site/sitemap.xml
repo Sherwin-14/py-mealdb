@@ -1,79 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kapitan.net/contributing.html</loc>
+    <loc>https://py-mealdb.com/contributing.html</loc>
     <lastmod>2025-01-21T14:59:46.867Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/index.html</loc>
+    <loc>https://py-mealdb.com/index.html</loc>
     <lastmod>2025-01-21T16:34:21.035Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.list_all_meals.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.list_all_meals.html</loc>
     <lastmod>2025-01-22T08:41:05.904Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.list_meal_categories.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.get_ingredient_image_small.html</loc>
+    <lastmod>2025-01-22T10:04:03.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.list_meal_categories.html</loc>
     <lastmod>2025-01-22T08:41:05.908Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.filter_by_category.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.filter_by_category.html</loc>
     <lastmod>2025-01-22T08:41:05.860Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.list_all_areas.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.list_all_areas.html</loc>
     <lastmod>2025-01-22T08:41:05.888Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.filter_by_area.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.filter_by_area.html</loc>
     <lastmod>2025-01-22T08:41:05.852Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.list_all_categories.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.list_all_categories.html</loc>
     <lastmod>2025-01-22T08:41:05.892Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/index.html</loc>
-    <lastmod>2025-01-22T08:41:05.824Z</lastmod>
+    <loc>https://py-mealdb.com/reference/index.html</loc>
+    <lastmod>2025-01-22T10:04:03.955Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.filter_by_ingredient.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.filter_by_ingredient.html</loc>
     <lastmod>2025-01-22T08:41:05.864Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.meal_details_by_id.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.meal_details_by_id.html</loc>
     <lastmod>2025-01-22T08:41:05.916Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.single_random_meal.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.single_random_meal.html</loc>
     <lastmod>2025-01-22T08:41:05.920Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.list_all_ingredients.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.list_all_ingredients.html</loc>
     <lastmod>2025-01-22T08:41:05.896Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.get_meal_by_name.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.get_meal_by_name.html</loc>
     <lastmod>2025-01-22T08:41:05.876Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.list_all.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.list_all.html</loc>
     <lastmod>2025-01-22T08:41:05.884Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/MealDB.html</loc>
-    <lastmod>2025-01-22T08:30:25.280Z</lastmod>
+    <loc>https://py-mealdb.com/reference/MealDB.html</loc>
+    <lastmod>2025-01-22T10:04:04.027Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/reference/mealdb.MealDB.get_latest_meal.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.get_latest_meal.html</loc>
     <lastmod>2025-01-22T08:41:05.872Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/about.html</loc>
+    <loc>https://py-mealdb.com/reference/mealdb.MealDB.get_ingredient_image.html</loc>
+    <lastmod>2025-01-22T10:04:03.983Z</lastmod>
+  </url>
+  <url>
+    <loc>https://py-mealdb.com/about.html</loc>
     <lastmod>2025-01-21T09:25:20.526Z</lastmod>
   </url>
   <url>
-    <loc>https://kapitan.net/license.html</loc>
+    <loc>https://py-mealdb.com/license.html</loc>
     <lastmod>2025-01-21T09:44:03.565Z</lastmod>
   </url>
 </urlset>

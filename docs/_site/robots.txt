@@ -1,1 +1,1 @@
-Sitemap: https://kapitan.net/sitemap.xml
+Sitemap: https://py-mealdb.com/sitemap.xml
