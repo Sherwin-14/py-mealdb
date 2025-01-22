@@ -20,9 +20,6 @@ class MealDB:
         Raises:
             httpx.HTTPError: If the API request fails.
 
-        Notes:
-            This function uses the MealDB API to search for meals by name.
-            The API returns a list of meals, which is then returned by this function.
         """
         r = httpx.get(f'{self.base_url}/search.php?s={name}')
         data = r.json()
@@ -38,9 +35,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the API request fails.
-
-        Notes:
-             This function uses the MealDB API to search for latest meal.
         """
         r = httpx.get(f'{self.base_url}/latest.php')
         data = r.json()
@@ -62,10 +56,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the API request fails.
-
-        Notes:
-            This function uses the MealDB API to retrieve the details of a meal by its ID.
-            The API returns a list containing the meal details, which is then returned by this function.
         """
         r = httpx.get(f'{self.base_url}/lookup.php?i={id}')
         data = r.json()
@@ -83,9 +73,6 @@ class MealDB:
         Raises:
             httpx.HTTPError: If the API request fails.
 
-        Notes:
-            This function uses the MealDB API to retrieve a single random meal.
-            The API returns a list containing the meal details, which is then returned by this function.
         """
         r = httpx.get(f'{self.base_url}/random.php')
         data = r.json()
@@ -106,10 +93,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the API request fails.
-
-        Notes:
-            This function uses the MealDB API to search for meals by letter.
-            The API returns a list of meals, which is then returned by this function.
         """
         r = httpx.get(f'{self.base_url}/search.php?f={letter}')
         data = r.json()
@@ -127,10 +110,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the API request fails.
-
-        Notes:
-            This function uses the MealDB API to retrieve a list of meal categories.
-            The API returns a dictionary containing the categories, which is then returned by this function.
         """
         r = httpx.get(f'{self.base_url}/categories.php')
         data = r.json()
@@ -147,10 +126,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the API request fails.
-
-        Notes:
-            This function uses the MealDB API to retrieve a list of all categories.
-            The API returns a dictionary containing the categories, which is then converted to a list and returned by this function.
         """
         r = httpx.get(f'{self.base_url}/categories.php')
         data = r.json()
@@ -166,10 +141,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the API request fails.
-
-        Notes:
-            This function uses the MealDB API to retrieve a list of all areas.
-            The API returns a dictionary containing the areas, which is then converted to a list and returned by this function.
         """
         r = httpx.get(f'{self.base_url}/list.php?a=list')
         data = r.json()
@@ -186,10 +157,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the API request fails.
-
-        Notes:
-            This function uses the MealDB API to retrieve a list of all ingredients.
-            The API returns a dictionary containing the ingredients, which is then converted to a list and returned by this function.
         """
         r = httpx.get(f'{self.base_url}/list.php?i=list')
         data = r.json()
@@ -206,10 +173,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If any of the API requests fail.
-
-        Notes:
-            This function uses the MealDB API to retrieve a list of all categories, areas, and ingredients.
-            The API returns a dictionary containing the categories, areas, and ingredients, which are then combined into a list and returned by this function.
         """
         r1 = httpx.get(f'{self.base_url}/list.php?c=list')
         data1 = r1.json()
@@ -236,10 +199,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the API request fails.
-
-        Notes:
-            This function uses the MealDB API to retrieve a list of meals that include a specific ingredient.
-            The API returns a dictionary containing the meals, which is then converted to a list and returned by this function.
         """
         r = httpx.get(f'{self.base_url}/filter.php?i={ingredient}')
         data = r.json()
@@ -259,10 +218,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the API request fails.
-
-        Notes:
-            This function uses the MealDB API to retrieve a list of meals that belong to a specific category.
-            The API returns a dictionary containing the meals, which is then converted to a list and returned by this function.
         """
         r = httpx.get(f'{self.base_url}/filter.php?c={category}')
         data = r.json()
@@ -282,10 +237,6 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the API request fails.
-
-        Notes:
-            This function uses the MealDB API to retrieve a list of meals that originate from a specific area.
-            The API returns a dictionary containing the meals, which is then converted to a list and returned by this function.
         """
         r = httpx.get(f'{self.base_url}/filter.php?a={area}')
         data = r.json()
@@ -294,7 +245,18 @@ class MealDB:
         return list(meal)
     
     def get_ingredient_image(self,ingredient) -> any:
-        
+        """
+        Fetches an image of the specified ingredient from TheMealDB and saves it locally.
+
+        Args:
+            ingredient (str): The name of the ingredient for which the image is to be fetched.
+
+        Returns:
+            str: A message indicating the successful fetching and saving of the image.
+
+        Raises:
+            httpx.HTTPError: If the API request fails
+        """
         r =  httpx.get(f'https://www.themealdb.com/images/ingredients/{ingredient}.png')
         image_data = r.content
         with open(f'{ingredient}.png', 'wb') as file:
@@ -303,11 +265,22 @@ class MealDB:
         return "Fetched Image Successfully"
         
     def get_ingredient_image_small(self,ingredient) -> any:
+        """
+        Fetches an scaled down image of the specified ingredient from TheMealDB and saves it locally.
+
+        Args:
+            ingredient (str): The name of the ingredient for which the image is to be fetched.
+
+        Returns:
+            str: A message indicating the successful fetching and saving of the image.
+
+        Raises:
+            httpx.HTTPError: If the API request fails
+        """
         r =  httpx.get( f'https://www.themealdb.com/images/ingredients/{ingredient}-Small.png')
         image_data = r.content
         with open(f'{ingredient}-small.png', 'wb') as file:
             file.write(image_data)
     
         return "Fetched Image Successfully"
-    
     

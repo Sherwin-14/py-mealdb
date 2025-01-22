@@ -1,6 +1,8 @@
 import unittest
 import httpx
-from unittest import mock
+import os
+
+from unittest.mock import patch, Mock
 from mealdb import MealDB 
 
 class TestMealDB(unittest.TestCase):
@@ -100,6 +102,20 @@ class TestMealDB(unittest.TestCase):
             mock_get.side_effect = httpx.HTTPError("Mocked HTTP error")
             with self.assertRaises(httpx.HTTPError):
                   self.meal_db.get_latest_meal()
+
+     def test_get_ingredient_image(self):
+        result = self.meal_db.get_ingredient_image('tomato')
+        self.assertEqual(result, "Fetched Image Successfully")
+
+        # Check if the image was saved correctly
+        self.assertTrue(os.path.exists('tomato.png'))
+
+     def test_get_ingredient_image_small(self):
+        result = self.meal_db.get_ingredient_image_small('tomato')
+        self.assertEqual(result, "Fetched Image Successfully")
+
+        # Check if the image was saved correctly
+        self.assertTrue(os.path.exists('tomato-small.png'))
 
 if __name__ == '__main__':
     unittest.main()
