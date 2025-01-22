@@ -296,10 +296,14 @@ class MealDB:
         
         return list(meal)
     
-    def get_ingredient_image(self,ingredient) -> Image:
-        
-        url = f'https://www.themealdb.com/images/ingredients/{ingredient}.png'
-        r =  httpx.get(url)
+class Images:
+
+    def __init__(self,ingredient):
+
+        self.base_url = f'https://www.themealdb.com/images/ingredients/{ingredient}.png'
+    
+    def get_ingredient_image(self) -> Image:
+        r =  httpx.get(self.base_url)
         image_data = r.content
         try:
             image = Image.open(BytesIO(image_data))
@@ -309,10 +313,8 @@ class MealDB:
             print(f"Error: {e}")
             return None
         
-    def get_small_ingredient_image(self,ingredient) -> Image:
-        
-        url = f'https://www.themealdb.com/images/ingredients/{ingredient}-Small.png'
-        r =  httpx.get(url)
+    def get_small_ingredient_image(self) -> Image:
+        r =  httpx.get(self.base_url)
         image_data = r.content
         try:
             image = Image.open(BytesIO(image_data))
