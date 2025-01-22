@@ -4,6 +4,22 @@
 
 py-mealdb is a Python library that allows users to interact effortlessly with TheMealDB API, providing access to a vast collection of meal recipes, ingredients, and culinary inspiration from around the world.
 
+## Installation
+
+```py
+pip install py-mealdb
+```
+## Quick Start
+
+```py
+from mealdb import MealDB
+
+mb = MealDB(API_KEY)
+meal = mb.get_meal_by_name('Potato Salad')
+
+print(meal)
+```
+
 ## Acknowledgment
 
 I would like to extend our sincere gratitude to TheMealDB for providing their comprehensive and free API. Their extensive database of meal recipes, ingredients, and detailed culinary information has been invaluable in the development of py-mealdb. Without their robust and accessible API, this project would not have been possible.
