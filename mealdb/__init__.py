@@ -1,5 +1,4 @@
 import httpx
-import matplotlib.pyplot as plt
 
 class MealDB:
 
@@ -283,4 +282,3 @@ class MealDB:
             file.write(image_data)
     
         return "Fetched Image Successfully"
-    
