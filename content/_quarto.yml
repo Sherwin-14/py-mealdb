@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: ./docs
+
+website:
+      title: "py-mealdb"
+      site-url: https://py-mealdb.com
+      sidebar:
+          style: docked  
+          background: '#008080'
+          tools:
+            - icon: github
+              href: https://github.com/Sherwin-14/py-mealdb
+          contents:
+            - text: "Home" 
+              href: index.qmd
+            - text: "API Reference"
+              href: reference/MealDB.qmd
+            - text: "Contributing Guide"
+              href: contributing.qmd
+quartodoc:
+      style: pkgdown
+      dir: reference
+      package: mealdb
+      dynamic: true
+      parser: google
+      sections:
+        - title: 
+          desc: Functions to inspect docstrings.
+          contents:
+            - name: MealDB
+              children: separate
+
+format:
+  html:
+    grid: 
+      body-width: 1200px
+    theme: journal
+    css: styles.scss
+    page_layout: full
+
+
+
+

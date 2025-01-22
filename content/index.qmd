@@ -1,0 +1,36 @@
+---
+sidebar: true
+toc: false
+format:
+  html:
+    page-layout: full
+    body-width: 1000px
+  
+---
+
+# The MealDB Python Library
+
+The MealDB Python Library provides seamless access to The MealDB API, enabling developers to integrate a rich database of meal recipes into their applications. The library is designed for Python, making it easy to incorporate meal data into your projects.
+
+## Get Started
+
+Before getting started make sure that you have got your API_KEY from [The Meal DB](https://www.themealdb.com/).
+
+```py
+from mealdb import MealDB
+
+mb = MealDB(API_KEY)
+meal = mb.get_meal_by_name('Potato Salad')
+
+print(meal)
+```
+
+## Contributing
+We appreciate all contributions, from reporting bugs to implementing new features. Read our contributing guide to learn more.
+
+
+## License
+This project is licensed under the terms of the CC-BY-NC-SA-4.0.
+
+
+
