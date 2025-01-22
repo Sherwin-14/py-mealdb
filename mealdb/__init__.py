@@ -32,10 +32,8 @@ class MealDB:
         """
         Retrieves the latest meal data from the API.
 
-        Makes a GET request to the 'latest.php' endpoint and returns the meal data as a list.
-
         Returns:
-            list: A list containing the latest meal data.
+            list: A list containing the latest meal data, or a message indicating that the user needs to subscribe to access the endpoint.
 
         Raises:
             httpx.HTTPError: If the API request fails.
