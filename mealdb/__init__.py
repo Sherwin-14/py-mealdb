@@ -301,7 +301,7 @@ class Images:
     def __init__(self,ingredient):
 
         self.base_url = f'https://www.themealdb.com/images/ingredients/{ingredient}.png'
-    
+
     def get_ingredient_image(self) -> Image:
         r =  httpx.get(self.base_url)
         image_data = r.content
