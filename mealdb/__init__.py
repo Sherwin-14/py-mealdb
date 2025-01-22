@@ -313,7 +313,7 @@ class Images:
             print(f"Error: {e}")
             return None
         
-    def get_small_ingredient_image(self) -> Image:
+    def get_ingredient_image_small(self) -> Image:
         r =  httpx.get(self.base_url)
         image_data = r.content
         try:
