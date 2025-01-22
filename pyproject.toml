@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "py-mealdb"
-version = "0.1.4"
-description = "this is an api wrapper over The Meal DB"
+version = "0.1.5"
+description = "The MealDB API wrapper"
 authors = ["Sherwin-14 <varghesesheriwn@gmail.com>"]
 readme = "README.md"
 license = "CC-BY-NC-SA-4.0"

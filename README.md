@@ -1,6 +1,8 @@
 # py-mealdb 
 
-![](https://raw.githubusercontent.com/Sherwin-14/py-mealdb/refs/heads/main/burger.png)
+<p align="center" width="100%">
+    <img width="33%" src="https://raw.githubusercontent.com/Sherwin-14/py-mealdb/refs/heads/main/burger.png" alt="Burger Icon" style="width:100px; height:100px;">
+</p>
 
 py-mealdb is a Python library that allows users to interact effortlessly with TheMealDB API, providing access to a vast collection of meal recipes, ingredients, and culinary inspiration from around the world.
 
