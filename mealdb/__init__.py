@@ -245,16 +245,6 @@ class MealDB:
         meal = data['meals']
         
         return list(meal)
-    
-    def filter_by_multi_ingredient(self,ingredients:list) -> list:
-        
-
-        r = httpx.get(f'{self.base_url}/filter.php?i={ingredient}')
-        data = r.json()
-        meal = data['meals']
-        
-        return list(meal)
-
 
     def filter_by_category(self,category) -> list:
         """
