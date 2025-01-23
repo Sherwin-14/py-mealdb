@@ -128,8 +128,9 @@ class MealDB:
         """
         r = httpx.get(f'{self.base_url}/categories.php')
         data = r.json()
+        categories = data['categories']
         
-        return list(data)
+        return list(categories)
 
     def list_all_areas(self) -> list:
         """
