@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "py-mealdb"
-version = "0.1.6"
+version = "0.1.7"
 description = "The MealDB API wrapper"
 authors = ["Sherwin-14 <varghesesheriwn@gmail.com>"]
 readme = "README.md"
@@ -19,9 +19,10 @@ documentation = "https://sherwin-14.github.io/py-mealdb/"
 [tool.poetry.dependencies]
 python = "^3.11"
 httpx = "^0.28.1"
+
+[tool.poetry.group.docs.dependencies]
 quarto = "^0.1.0"
 quartodoc = "^0.9.1"
-pillow = "^11.1.0"
 
 
 [build-system]
