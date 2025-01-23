@@ -22,6 +22,9 @@ meal = mb.get_meal_by_name('Potato Salad')
 print(meal)
 ```
 
+## Documentation
+For more information, please refer to our [Documentation](https://sherwin-14.github.io/py-mealdb/).
+
 ## Acknowledgment
 
 I would like to extend our sincere gratitude to TheMealDB for providing their comprehensive and free API. Their extensive database of meal recipes, ingredients, and detailed culinary information has been invaluable in the development of py-mealdb. Without their robust and accessible API, this project would not have been possible.
