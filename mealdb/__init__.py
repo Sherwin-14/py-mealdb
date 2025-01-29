@@ -34,6 +34,9 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
+
+        Note:
+            This endpoint is only accessible with a subscription to The MealDB API. If you don't possess a subscription a message is returned instead.
         """
         r = httpx.get(f'{self.base_url}/latest.php')
         data = r.json()
