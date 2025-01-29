@@ -9,7 +9,7 @@ py-mealdb is a Python library that allows users to interact effortlessly with Th
 2. [Quick Start](#️-quick-start) 
 3. [Documentation](#-documentation)
 4. [Contributing](#-contributing)
-5. [License](#-license) 📜
+5. [License](#-license)
 6. [Code of Conduct](#-code-of-conduct)
 
 ## 💻 Installation
