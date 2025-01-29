@@ -1,0 +1,23 @@
+# get_latest_meal { #mealdb.MealDB.get_latest_meal }
+
+```python
+MealDB.get_latest_meal()
+```
+
+Retrieves the latest meal data from the API.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description                                                                                                              |
+|--------|--------|--------------------------------------------------------------------------------------------------------------------------|
+| list   | list   | A list containing the latest meal data, or a message indicating that the user needs to subscribe to access the endpoint. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type            | Description                                              |
+|--------|-----------------|----------------------------------------------------------|
+|        | httpx.HTTPError | Check httpx's documentation for all possible exceptions. |
+
+## Note {.doc-section .doc-section-note}
+
+This endpoint is only accessible with a subscription to The MealDB API. If you don't possess a subscription a message is returned instead.

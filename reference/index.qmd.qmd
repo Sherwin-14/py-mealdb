@@ -1,0 +1,31 @@
+# MealDB API Reference
+
+Functions to inspect docstrings.
+
+## MealDB { #mealdb.MealDB }
+
+```python
+MealDB(self, api_key)
+```
+
+
+
+### Methods
+
+| Name | Description |
+| --- | --- |
+| [filter_by_area](mealdb.MealDB.filter_by_area.qmd#mealdb.MealDB.filter_by_area) | Retrieves a list of meals that originate from a specific area from the MealDB API. |
+| [filter_by_category](mealdb.MealDB.filter_by_category.qmd#mealdb.MealDB.filter_by_category) | Retrieves a list of meals that belong to a specific category from the MealDB API. |
+| [filter_by_ingredient](mealdb.MealDB.filter_by_ingredient.qmd#mealdb.MealDB.filter_by_ingredient) | Retrieves a list of meals that include a specific ingredient from the MealDB API. |
+| [get_ingredient_image](mealdb.MealDB.get_ingredient_image.qmd#mealdb.MealDB.get_ingredient_image) | Fetches an image of the specified ingredient from TheMealDB and saves it locally. |
+| [get_ingredient_image_small](mealdb.MealDB.get_ingredient_image_small.qmd#mealdb.MealDB.get_ingredient_image_small) | Fetches an scaled down image of the specified ingredient from TheMealDB and saves it locally. |
+| [get_latest_meal](mealdb.MealDB.get_latest_meal.qmd#mealdb.MealDB.get_latest_meal) | Retrieves the latest meal data from the API. |
+| [get_meal_by_name](mealdb.MealDB.get_meal_by_name.qmd#mealdb.MealDB.get_meal_by_name) | Retrieves a list of meals by name from the MealDB API. |
+| [list_all](mealdb.MealDB.list_all.qmd#mealdb.MealDB.list_all) | Retrieves a list of all categories, areas, and ingredients from the MealDB API. |
+| [list_all_areas](mealdb.MealDB.list_all_areas.qmd#mealdb.MealDB.list_all_areas) | Retrieves a list of all areas from the MealDB API. |
+| [list_all_categories](mealdb.MealDB.list_all_categories.qmd#mealdb.MealDB.list_all_categories) | Retrieves a list of all categories from the MealDB API. |
+| [list_all_ingredients](mealdb.MealDB.list_all_ingredients.qmd#mealdb.MealDB.list_all_ingredients) | Retrieves a list of all ingredients from the MealDB API. |
+| [list_all_meals](mealdb.MealDB.list_all_meals.qmd#mealdb.MealDB.list_all_meals) | Retrieves a list of meals starting with a specific letter from the MealDB API. |
+| [list_meal_categories](mealdb.MealDB.list_meal_categories.qmd#mealdb.MealDB.list_meal_categories) | Retrieves a list of meal categories from the MealDB API. |
+| [meal_details_by_id](mealdb.MealDB.meal_details_by_id.qmd#mealdb.MealDB.meal_details_by_id) | Retrieves the details of a meal by its ID from the MealDB API. |
+| [single_random_meal](mealdb.MealDB.single_random_meal.qmd#mealdb.MealDB.single_random_meal) | Retrieves a single random meal from the MealDB API. |

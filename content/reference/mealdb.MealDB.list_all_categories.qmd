@@ -1,0 +1,19 @@
+# list_all_categories { #mealdb.MealDB.list_all_categories }
+
+```python
+MealDB.list_all_categories()
+```
+
+Retrieves a list of all categories from the MealDB API.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description                                       |
+|--------|--------|---------------------------------------------------|
+| list   | list   | A list of dictionaries containing the categories. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type            | Description                                              |
+|--------|-----------------|----------------------------------------------------------|
+|        | httpx.HTTPError | Check httpx's documentation for all possible exceptions. |

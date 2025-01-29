@@ -1,0 +1,19 @@
+# single_random_meal { #mealdb.MealDB.single_random_meal }
+
+```python
+MealDB.single_random_meal()
+```
+
+Retrieves a single random meal from the MealDB API.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description                                     |
+|--------|--------|-------------------------------------------------|
+| list   | list   | A list containing the details of a random meal. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type            | Description                                              |
+|--------|-----------------|----------------------------------------------------------|
+|        | httpx.HTTPError | Check httpx's documentation for all possible exceptions. |
