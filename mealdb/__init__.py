@@ -6,7 +6,7 @@ class MealDB:
       self.api_key = api_key
       self.base_url = f'https://www.themealdb.com/api/json/v1/{api_key}'
 
-    def get_meal_by_name(self,name) -> list:  
+    def get_meal_by_name(self,name:str) -> list:  
         """
         Retrieves a list of meals by name from the MealDB API.
 
@@ -43,12 +43,12 @@ class MealDB:
         else:
             return list(meal)
            
-    def meal_details_by_id(self,id) -> list:
+    def meal_details_by_id(self,id:str) -> list:
         """
         Retrieves the details of a meal by its ID from the MealDB API.
 
         Args:
-            id (int): The ID of the meal to retrieve. (e.g. 52772).
+            id (str): The ID of the meal to retrieve. (e.g. 52772).
 
         Returns:
             list: A list containing the details of the meal.
@@ -80,7 +80,7 @@ class MealDB:
         return list(meal)
 
 
-    def list_all_meals(self,letter) -> list:
+    def list_all_meals(self,letter:str) -> list:
         """
         Retrieves a list of meals starting with a specific letter from the MealDB API.
 
@@ -187,7 +187,7 @@ class MealDB:
 
         return answers
 
-    def filter_by_ingredient(self,ingredient) -> list:
+    def filter_by_ingredient(self,ingredient:str) -> list:
         """
         Retrieves a list of meals that include a specific ingredient from the MealDB API.
 
@@ -206,7 +206,7 @@ class MealDB:
         
         return list(meal)
     
-    def filter_by_category(self,category) -> list:
+    def filter_by_category(self,category:str) -> list:
         """
         Retrieves a list of meals that belong to a specific category from the MealDB API.
 
@@ -225,7 +225,7 @@ class MealDB:
         
         return list(meal)
 
-    def filter_by_area(self,area) -> list:
+    def filter_by_area(self,area:str) -> list:
         """
         Retrieves a list of meals that originate from a specific area from the MealDB API.
 
@@ -244,7 +244,7 @@ class MealDB:
         
         return list(meal)
     
-    def get_ingredient_image(self,ingredient) -> any:
+    def get_ingredient_image(self,ingredient:str) -> any:
         """
         Fetches an image of the specified ingredient from TheMealDB and saves it locally.
 
@@ -264,7 +264,7 @@ class MealDB:
     
         return "Fetched Image Successfully"
         
-    def get_ingredient_image_small(self,ingredient) -> any:
+    def get_ingredient_image_small(self,ingredient:str) -> any:
         """
         Fetches an scaled down image of the specified ingredient from TheMealDB and saves it locally.
 
