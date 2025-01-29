@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – py-mealdb</title>
+<title>index.qmd – py-mealdb</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -80,9 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      py-mealdb
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference/index.qmd.html">API Reference</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -118,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/MealDB.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/index.qmd.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">API Reference</span></a>
   </div>
 </li>
@@ -140,18 +172,88 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="function-reference" class="level1 doc doc-index">
-<h1 class="doc doc-index">Function reference</h1>
+<section id="mealdb-api-reference" class="level1">
+<h1>MealDB API Reference</h1>
+<p>Functions to inspect docstrings.</p>
+<section id="mealdb.MealDB" class="level2">
+<h2 class="anchored" data-anchor-id="mealdb.MealDB">MealDB</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>MealDB(<span class="va">self</span>, api_key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="methods" class="level3">
+<h3 class="anchored" data-anchor-id="methods">Methods</h3>
 <table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td><a href="../reference/MealDB.html#mealdb.MealDB">MealDB</a></td>
-<td></td>
+<td><a href="../reference/mealdb.MealDB.filter_by_area.html#mealdb.MealDB.filter_by_area">filter_by_area</a></td>
+<td>Retrieves a list of meals that originate from a specific area from the MealDB API.</td>
+</tr>
+<tr class="even">
+<td><a href="../reference/mealdb.MealDB.filter_by_category.html#mealdb.MealDB.filter_by_category">filter_by_category</a></td>
+<td>Retrieves a list of meals that belong to a specific category from the MealDB API.</td>
+</tr>
+<tr class="odd">
+<td><a href="../reference/mealdb.MealDB.filter_by_ingredient.html#mealdb.MealDB.filter_by_ingredient">filter_by_ingredient</a></td>
+<td>Retrieves a list of meals that include a specific ingredient from the MealDB API.</td>
+</tr>
+<tr class="even">
+<td><a href="../reference/mealdb.MealDB.get_ingredient_image.html#mealdb.MealDB.get_ingredient_image">get_ingredient_image</a></td>
+<td>Fetches an image of the specified ingredient from TheMealDB and saves it locally.</td>
+</tr>
+<tr class="odd">
+<td><a href="../reference/mealdb.MealDB.get_ingredient_image_small.html#mealdb.MealDB.get_ingredient_image_small">get_ingredient_image_small</a></td>
+<td>Fetches an scaled down image of the specified ingredient from TheMealDB and saves it locally.</td>
+</tr>
+<tr class="even">
+<td><a href="../reference/mealdb.MealDB.get_latest_meal.html#mealdb.MealDB.get_latest_meal">get_latest_meal</a></td>
+<td>Retrieves the latest meal data from the API.</td>
+</tr>
+<tr class="odd">
+<td><a href="../reference/mealdb.MealDB.get_meal_by_name.html#mealdb.MealDB.get_meal_by_name">get_meal_by_name</a></td>
+<td>Retrieves a list of meals by name from the MealDB API.</td>
+</tr>
+<tr class="even">
+<td><a href="../reference/mealdb.MealDB.list_all.html#mealdb.MealDB.list_all">list_all</a></td>
+<td>Retrieves a list of all categories, areas, and ingredients from the MealDB API.</td>
+</tr>
+<tr class="odd">
+<td><a href="../reference/mealdb.MealDB.list_all_areas.html#mealdb.MealDB.list_all_areas">list_all_areas</a></td>
+<td>Retrieves a list of all areas from the MealDB API.</td>
+</tr>
+<tr class="even">
+<td><a href="../reference/mealdb.MealDB.list_all_categories.html#mealdb.MealDB.list_all_categories">list_all_categories</a></td>
+<td>Retrieves a list of all categories from the MealDB API.</td>
+</tr>
+<tr class="odd">
+<td><a href="../reference/mealdb.MealDB.list_all_ingredients.html#mealdb.MealDB.list_all_ingredients">list_all_ingredients</a></td>
+<td>Retrieves a list of all ingredients from the MealDB API.</td>
+</tr>
+<tr class="even">
+<td><a href="../reference/mealdb.MealDB.list_all_meals.html#mealdb.MealDB.list_all_meals">list_all_meals</a></td>
+<td>Retrieves a list of meals starting with a specific letter from the MealDB API.</td>
+</tr>
+<tr class="odd">
+<td><a href="../reference/mealdb.MealDB.list_meal_categories.html#mealdb.MealDB.list_meal_categories">list_meal_categories</a></td>
+<td>Retrieves a list of meal categories from the MealDB API.</td>
+</tr>
+<tr class="even">
+<td><a href="../reference/mealdb.MealDB.meal_details_by_id.html#mealdb.MealDB.meal_details_by_id">meal_details_by_id</a></td>
+<td>Retrieves the details of a meal by its ID from the MealDB API.</td>
+</tr>
+<tr class="odd">
+<td><a href="../reference/mealdb.MealDB.single_random_meal.html#mealdb.MealDB.single_random_meal">single_random_meal</a></td>
+<td>Retrieves a single random meal from the MealDB API.</td>
 </tr>
 </tbody>
 </table>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
