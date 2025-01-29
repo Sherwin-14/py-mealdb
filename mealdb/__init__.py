@@ -105,7 +105,7 @@ class MealDB:
         Retrieves a list of meal categories from the MealDB API.
 
         Returns:
-            dict: A dictionary containing the list of meal categories.
+            list: A dictionary containing the list of meal categories.
 
         Raises:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.

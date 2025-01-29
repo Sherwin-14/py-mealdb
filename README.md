@@ -1,17 +1,24 @@
-# py-mealdb 
-
-<p align="center" width="100%">
-    <img width="33%" src="https://raw.githubusercontent.com/Sherwin-14/py-mealdb/refs/heads/main/burger.png" alt="Burger Icon" style="width:100px; height:100px;">
-</p>
+# py-mealdb ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/sherwin-14/py-mealdb/tests.yml) ![GitHub Release](https://img.shields.io/github/v/release/Sherwin-14/py-mealdb) [![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0) ![GitHub Repo stars](https://img.shields.io/github/stars/Sherwin-14/py-mealdb)
 
 py-mealdb is a Python library that allows users to interact effortlessly with TheMealDB API, providing access to a vast collection of meal recipes, ingredients, and culinary inspiration from around the world.
 
-## Installation
+## 📚 Table of Contents
+
+1. [Installation](#-installation) 
+2. [Quick Start](#️-quick-start) 
+3. [Documentation](#-documentation) 📄
+4. [Contributing](#-contributing) 🤝
+5. [License](#-license) 📜
+6. [Code of Conduct](#-code-of-conduct) 🚫
+
+## 💻 Installation
 
 ```py
 pip install py-mealdb
 ```
-## Quick Start
+
+## 🏃‍♂️ Quick Start
+
 
 ```py
 from mealdb import MealDB
@@ -22,13 +29,14 @@ meal = mb.get_meal_by_name('Potato Salad')
 print(meal)
 ```
 
-## Documentation
+## 🤝 Contributing
+If you'd like to contribute to the package, please submit a pull request or report an issue on the issue tracker.
+
+## 📄 Documentation
 For more information, please refer to our [Documentation](https://sherwin-14.github.io/py-mealdb/).
 
-## Acknowledgment
+## 🚫 Code of Conduct
+For more information about code of conduct click here [Conduct](https://github.com/Sherwin-14/py-mealdb/blob/main/CODE_OF_CONDUCT.md).
 
-I would like to extend our sincere gratitude to TheMealDB for providing their comprehensive and free API. Their extensive database of meal recipes, ingredients, and detailed culinary information has been invaluable in the development of py-mealdb. Without their robust and accessible API, this project would not have been possible.
-
-Thank you, TheMealDB, for your dedication to sharing the love of cooking and helping food enthusiasts around the world discover new and exciting recipes!
 
 
