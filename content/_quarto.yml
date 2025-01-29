@@ -18,13 +18,13 @@ website:
             - text: "Contributing Guide"
               href: contributing.qmd
 quartodoc:
-      style: pkgdown
+      style: single-page
       dir: reference
       package: mealdb
       dynamic: true
       parser: google
       sections:
-        - title: 
+        - title: MealDB API Reference
           desc: Functions to inspect docstrings.
           contents:
             - name: MealDB
