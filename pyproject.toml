@@ -11,6 +11,9 @@ packages = [
     { include = "mealdb" },
 ]
 
+[project]
+name = "py-mealdb"
+
 [project.urls]
 repository = "https://github.com/Sherwin-14/py-mealdb/"
 documentation = "https://sherwin-14.github.io/py-mealdb/"

@@ -286,3 +286,4 @@ class MealDB:
             file.write(image_data)
     
         return "Fetched Image Successfully"
+    
