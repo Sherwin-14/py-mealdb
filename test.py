@@ -1,6 +1,6 @@
 from py_mealdb import MealDB
 
 mb = MealDB(1)
-meal = mb.meal_details_by_id('52772')
+meal = mb.filter_by_area('Canadian')
 
-print(meal)
+print(meal.__getitem__(2))

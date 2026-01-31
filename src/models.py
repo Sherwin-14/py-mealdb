@@ -1,35 +1,40 @@
 from dataclasses import dataclass, field
-from typing import Optional, List
-from datetime import datetime
+from typing import List, Dict, Any
+
 
 @dataclass
-class Meal:
-    idMeal: str
-    strMeal: str
-    strCategory: str
-    strArea: str
-    strInstructions: str
-    strMealThumb: str
-    strYoutube: str
-
-    # Optional fields
-    strMealAlternate: Optional[str] = None
-    strTags: Optional[str] = None
-    strSource: Optional[str] = None
-    strImageSource: Optional[str] = None
-    strCreativeCommonsConfirmed: Optional[str] = None
-    dateModified: Optional[str] = None
+class MealList:
+    """Container for multiple meals with convenient access methods."""
+    meals: List[Dict[str, Any]] = field(default_factory=list)
     
-    strIngredients: list[Optional[str]]
-    strMeasure: list[Optional[str]]
-
+    @classmethod
+    def from_response(cls, data: dict) -> 'MealList':
+        """Create from API response like {'meals': [...]}"""
+        return cls(meals=data.get('meals', []))
     
-
-
-
-
-
-
-
-
+    def __len__(self) -> int:
+        return len(self.meals)
     
+    def __getitem__(self, index: int) -> Dict[str, Any]:
+        return self.meals[index]
+    
+    def __iter__(self):
+        return iter(self.meals)
+    
+    def __repr__(self) -> str:
+        return f"MealList(count={len(self.meals)})"
+    
+    @property
+    def ids(self) -> List[str]:
+        """Get all meal IDs as a list."""
+        return [meal['idMeal'] for meal in self.meals]
+    
+    @property
+    def names(self) -> List[str]:
+        """Get all meal names as a list."""
+        return [meal['strMeal'] for meal in self.meals]
+    
+    @property
+    def thumbnails(self) -> List[str]:
+        """Get all thumbnail URLs as a list."""
+        return [meal['strMealThumb'] for meal in self.meals]

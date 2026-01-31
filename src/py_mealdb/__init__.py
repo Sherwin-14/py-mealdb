@@ -12,6 +12,8 @@
 
 import httpx
 
+from models import MealList
+
 class MealDB:
 
     def __init__(self, api_key):
@@ -254,10 +256,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/filter.php?a={area}')
-        data = r.json()
-        meal = data['meals']
-        
-        return list(meal)
+        return MealList.from_response(r.json())
     
     def get_ingredient_image(self,ingredient:str) -> any:
         """
