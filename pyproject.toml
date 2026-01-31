@@ -1,33 +1,26 @@
-[tool.poetry]
+[project]
 name = "py-mealdb"
 version = "0.1.8"
 description = "The MealDB API wrapper"
-authors = ["Sherwin-14 <varghesesheriwn@gmail.com>"]
+authors = [{name= "Sherwin Varghese", email = "varghesesheriwn@gmail.com"}]
 readme = "README.md"
-license = "CC-BY-NC-SA-4.0"
-keywords = [ "api", "cooking" ]
-
-packages = [
-    { include = "mealdb" },
+license = "EPL-2.0"
+dependencies = [
+    "httpx>=0.28.1",
+    "quarto>=0.1.0",
+    "quartodoc>=0.11.1",
 ]
-
-[project]
-name = "py-mealdb"
 
 [project.urls]
 repository = "https://github.com/Sherwin-14/py-mealdb/"
 documentation = "https://sherwin-14.github.io/py-mealdb/"
 
 
-[tool.poetry.dependencies]
-python = "^3.11"
-httpx = "^0.28.1"
 
-[tool.poetry.group.docs.dependencies]
+[project.group.docs.dependencies]
 quarto = "^0.1.0"
 quartodoc = "^0.9.1"
 
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.9.28,<0.10.0"]
+build-backend = "uv_build"
