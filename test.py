@@ -1,6 +1,6 @@
 from py_mealdb import MealDB
 
 mb = MealDB(1)
-meal = mb.filter_by_ingredient('chicken_breast')
+meal = mb.list_meal_categories()
 
-print(meal.names)
+print(meal.categories)

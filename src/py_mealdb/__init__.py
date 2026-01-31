@@ -12,7 +12,7 @@
 
 import httpx
 
-from models import MealList
+from models import Meal, MealList
 
 class MealDB:
 
@@ -128,10 +128,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/categories.php')
-        data = r.json()
-        categories = data['categories']
-        
-        return list(categories)
+        return Meal.from_response(r.json())
 
     def list_all_categories(self) -> list:
         """
