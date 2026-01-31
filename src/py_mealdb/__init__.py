@@ -218,10 +218,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/filter.php?i={ingredient}')
-        data = r.json()
-        meal = data['meals']
-        
-        return list(meal)
+        return MealList.from_response(r.json())
     
     def filter_by_category(self,category:str) -> list:
         """
@@ -237,10 +234,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/filter.php?c={category}')
-        data = r.json()
-        meal = data['meals']
-        
-        return list(meal)
+         return MealList.from_response(r.json())
 
     def filter_by_area(self,area:str) -> list:
         """
