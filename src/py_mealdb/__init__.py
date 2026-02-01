@@ -12,7 +12,7 @@
 
 import httpx
 
-from models import MealList, Meals
+from .models import *
 
 class MealDB:
 
@@ -116,7 +116,6 @@ class MealDB:
         
         return list(meals)
 
-
     def list_meal_categories(self) -> list:
         """
         Retrieves a list of meal categories from the MealDB API.
@@ -143,7 +142,7 @@ class MealDB:
         r = httpx.get(f'{self.base_url}/categories.php')
         return Meals.from_catgeories(r.json())
 
-    def list_all_areas(self) -> list:
+    def list_all_areas(self) -> Area:
         """
         Retrieves a list of all areas from the MealDB API.
 
@@ -154,7 +153,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/list.php?a=list')
-        return Meals.from_area(r.json())
+        return Area(r.json().get("meals",[]))
 
     def list_all_ingredients(self) -> list:
         """
@@ -192,7 +191,7 @@ class MealDB:
 
         return answers
 
-    def filter_by_ingredient(self,ingredient:str) -> list:
+    def filter_by_ingredient(self,ingredient:str) -> MealList:
         """
         Retrieves a list of meals that include a specific ingredient from the MealDB API.
 
@@ -206,6 +205,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/filter.php?i={ingredient}')
+        r.raise_for_status()
         return MealList.from_response(r.json())
     
     def filter_by_category(self,category:str) -> list:
