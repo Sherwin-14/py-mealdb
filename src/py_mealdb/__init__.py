@@ -12,7 +12,7 @@
 
 import httpx
 
-from models import MealList, Areas
+from models import MealList, Meals
 
 class MealDB:
 
@@ -141,10 +141,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/categories.php')
-        data = r.json()
-        # categories = data['categories']
-        
-        return data
+        return Meals.from_catgeories(r.json())
 
     def list_all_areas(self) -> list:
         """
@@ -157,7 +154,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/list.php?a=list')
-        return Areas.from_area(r.json())
+        return Meals.from_area(r.json())
 
     def list_all_ingredients(self) -> list:
         """
@@ -170,10 +167,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/list.php?i=list')
-        data = r.json()
-        ingredients = data['meals']
-        
-        return list(ingredients)
+        return Meals.from_ingredients(r.json())
 
     def list_all(self) -> list:
         """
