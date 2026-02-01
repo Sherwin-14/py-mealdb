@@ -157,7 +157,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/list.php?a=list')
-        return Areas.from_response(r.json())
+        return Areas.from_area(r.json())
 
     def list_all_ingredients(self) -> list:
         """
