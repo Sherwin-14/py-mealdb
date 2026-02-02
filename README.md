@@ -39,4 +39,4 @@ For more information, please refer to our [Documentation](https://sherwin-14.git
 For more information about code of conduct click here [Conduct](https://github.com/Sherwin-14/py-mealdb/blob/main/CODE_OF_CONDUCT.md).
 
 ## 📜 License
-This project is licensed under the CC-BY-NC-SA-4.0
+This project is licensed under the EPL-2.0
