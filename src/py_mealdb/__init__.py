@@ -140,7 +140,8 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/categories.php')
-        return Meals.from_catgeories(r.json())
+        r.raise_for_status()
+        return CategoryList.from_response(r.json(), key='categories')
 
     def list_all_areas(self) -> Area:
         """
@@ -153,7 +154,8 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/list.php?a=list')
-        return Area(r.json().get("meals",[]))
+        r.raise_for_status()
+        return AreaList.from_response(r.json())
 
     def list_all_ingredients(self) -> list:
         """
@@ -166,7 +168,8 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/list.php?i=list')
-        return Meals.from_ingredients(r.json())
+        r.raise_for_status()
+        return IngredientList.from_response(r.json())
 
     def list_all(self) -> list:
         """
