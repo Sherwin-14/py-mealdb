@@ -35,9 +35,9 @@ class MealDB:
 
         """
         r = httpx.get(f'{self.base_url}/search.php?s={name}')
-        data = r.json()
-        meal = data['meals']
-        return list(meal)
+        # data = r.json()
+        # meal = data['meals']
+        return MealDetails.from_response(r.json())
     
     def get_latest_meal(self) -> list:
         """
