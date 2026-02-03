@@ -1,7 +1,7 @@
 from py_mealdb import MealDB
 
 mb = MealDB(1)
-area = mb.get_meal_by_name('Arrabiata')
+area = mb.get_meal_by_name('Potato Salad')
 # category = mb.list_all_areas()
 # ingr = mb.list_all_ingredients()
 
