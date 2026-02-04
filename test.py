@@ -1,8 +1,8 @@
 from py_mealdb import MealDB
 
 mb = MealDB(1)
-all_data = mb.single_random_meal()
+all_data = mb.list_meal_categories()
 # category = mb.list_all_areas()
 # ingr = mb.list_all_ingredients()
 
-print(all_data.names)
+print(all_data.categories)

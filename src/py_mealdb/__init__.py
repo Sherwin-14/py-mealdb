@@ -20,7 +20,7 @@ class MealDB:
       self.api_key = api_key
       self.base_url = f'https://www.themealdb.com/api/json/v1/{api_key}'
 
-    def get_meal_by_name(self,name:str) -> list:  
+    def get_meal_by_name(self,name:str) -> MealDetails:  
         """
         Retrieves a list of meals by name from the MealDB API.
 
@@ -59,7 +59,7 @@ class MealDB:
         else:
             return list(meal)
            
-    def meal_details_by_id(self,id:str) -> list:
+    def meal_details_by_id(self,id:str) -> MealDetails:
         """
         Retrieves the details of a meal by its ID from the MealDB API.
 
@@ -76,7 +76,7 @@ class MealDB:
         r.raise_for_status()
         return MealDetails.from_response(r.json())
 
-    def single_random_meal(self) -> list:
+    def single_random_meal(self) -> MealDetails:
         """
         Retrieves a single random meal from the MealDB API.
 
@@ -91,7 +91,7 @@ class MealDB:
         r.raise_for_status()
         return MealDetails.from_response(r.json())
 
-    def list_all_meals(self,letter:str) -> list:
+    def list_all_meals(self,letter:str) -> MealDetails:
         """
         Retrieves a list of meals starting with a specific letter from the MealDB API.
 
@@ -118,9 +118,9 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/categories.php')
-        return data["meals"]
+        return CategoryList(r.json(), key = "categories")
 
-    def list_all_categories(self) -> list:
+    def list_all_categories(self) -> CategoryList:
         """
         Retrieves a list of all categories from the MealDB API.
 
@@ -134,7 +134,7 @@ class MealDB:
         r.raise_for_status()
         return CategoryList.from_response(r.json(), key='categories')
 
-    def list_all_areas(self) -> Area:
+    def list_all_areas(self) -> AreaList:
         """
         Retrieves a list of all areas from the MealDB API.
 
@@ -148,7 +148,7 @@ class MealDB:
         r.raise_for_status()
         return AreaList.from_response(r.json())
 
-    def list_all_ingredients(self) -> list:
+    def list_all_ingredients(self) -> IngredientList:
         """
         Retrieves a list of all ingredients from the MealDB API.
 
@@ -204,7 +204,7 @@ class MealDB:
         r.raise_for_status()
         return MealList.from_response(r.json())
     
-    def filter_by_category(self,category:str) -> list:
+    def filter_by_category(self,category:str) -> MealList:
         """
         Retrieves a list of meals that belong to a specific category from the MealDB API.
 
@@ -221,7 +221,7 @@ class MealDB:
         r.raise_for_status()
         return MealList.from_response(r.json())
 
-    def filter_by_area(self,area:str) -> list:
+    def filter_by_area(self,area:str) -> MealList:
         """
         Retrieves a list of meals that originate from a specific area from the MealDB API.
 
