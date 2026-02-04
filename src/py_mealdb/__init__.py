@@ -238,7 +238,7 @@ class MealDB:
         r.raise_for_status()
         return MealList.from_response(r.json())
     
-    def get_ingredient_image(self,ingredient:str) -> any:
+    def get_ingredient_image(self,ingredient:str) -> bool:
         """
         Fetches an image of the specified ingredient from TheMealDB and saves it locally.
 
@@ -255,10 +255,11 @@ class MealDB:
         image_data = r.content
         with open(f'{ingredient}.png', 'wb') as file:
             file.write(image_data)
+            return True
     
-        return "Fetched Image Successfully"
+        return False
         
-    def get_ingredient_image_small(self,ingredient:str) -> any:
+    def get_ingredient_image_small(self,ingredient:str) -> bool:
         """
         Fetches an scaled down image of the specified ingredient from TheMealDB and saves it locally.
 
@@ -275,6 +276,7 @@ class MealDB:
         image_data = r.content
         with open(f'{ingredient}-small.png', 'wb') as file:
             file.write(image_data)
+            return True
     
-        return "Fetched Image Successfully"
+        return False
     
