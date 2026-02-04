@@ -107,7 +107,7 @@ class MealDB:
         r = httpx.get(f'{self.base_url}/search.php?f={letter}')
         return MealDetails.from_response(r.json())
 
-    def list_meal_categories(self) -> list:
+    def list_meal_categories(self) -> CategoryList:
         """
         Retrieves a list of meal categories from the MealDB API.
 
@@ -118,7 +118,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/categories.php')
-        return CategoryList(r.json(), key = "categories")
+        return CategoryList.from_response(r.json(), key = "categories")
 
     def list_all_categories(self) -> CategoryList:
         """
@@ -162,7 +162,7 @@ class MealDB:
         r.raise_for_status()
         return IngredientList.from_response(r.json())
 
-    def list_all(self) -> list:
+    def list_all(self) -> Dict[str, Union[CategoryList, AreaList, IngredientList]]:
         """
         Retrieves a list of all categories, areas, and ingredients from the MealDB API.
 
