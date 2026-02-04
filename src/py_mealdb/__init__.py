@@ -35,8 +35,7 @@ class MealDB:
 
         """
         r = httpx.get(f'{self.base_url}/search.php?s={name}')
-        # data = r.json()
-        # meal = data['meals']
+        r.raise_for_status()
         return MealDetails.from_response(r.json())
     
     def get_latest_meal(self) -> list:
@@ -74,10 +73,8 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/lookup.php?i={id}')
-        data = r.json()
-        meal = data['meals']
-        
-        return list(meal)
+        r.raise_for_status()
+        return MealDetails.from_response(r.json())
 
     def single_random_meal(self) -> list:
         """
@@ -91,11 +88,8 @@ class MealDB:
 
         """
         r = httpx.get(f'{self.base_url}/random.php')
-        data = r.json()
-        meal = data['meals']
-        
-        return list(meal)
-
+        r.raise_for_status()
+        return MealDetails.from_response(r.json())
 
     def list_all_meals(self,letter:str) -> list:
         """
@@ -111,10 +105,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/search.php?f={letter}')
-        data = r.json()
-        meals = data['meals']
-        
-        return list(meals)
+        return MealDetails.from_response(r.json())
 
     def list_meal_categories(self) -> list:
         """
@@ -182,17 +173,19 @@ class MealDB:
             httpx.HTTPError: If any of the API requests fail.
         """
         r1 = httpx.get(f'{self.base_url}/list.php?c=list')
-        data1 = r1.json()
+        r.raise_for_status
         
         r2 = httpx.get(f'{self.base_url}/list.php?a=list')
-        data2 = r2.json()
+        r.raise_for_status
 
         r3 = httpx.get(f'{self.base_url}/list.php?i=list')
-        data3 = r3.json()
+        r.raise_for_status
 
-        answers = [data1, data2, data3]
-
-        return answers
+        return {
+        'categories': CategoryList.from_response(r1.json(), key='categories'),
+        'areas': AreaList.from_response(r2.json()),
+        'ingredients': IngredientList.from_response(r3.json())
+        }
 
     def filter_by_ingredient(self,ingredient:str) -> MealList:
         """
@@ -225,6 +218,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/filter.php?c={category}')
+        r.raise_for_status()
         return MealList.from_response(r.json())
 
     def filter_by_area(self,area:str) -> list:
@@ -241,6 +235,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/filter.php?a={area}')
+        r.raise_for_status()
         return MealList.from_response(r.json())
     
     def get_ingredient_image(self,ingredient:str) -> any:

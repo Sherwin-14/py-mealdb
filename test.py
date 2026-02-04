@@ -1,8 +1,8 @@
 from py_mealdb import MealDB
 
 mb = MealDB(1)
-area = mb.get_meal_by_name('Potato Salad')
+all_data = mb.list_all()
 # category = mb.list_all_areas()
 # ingr = mb.list_all_ingredients()
 
-print(area.names)
+print(all_data['areas'].areas)
