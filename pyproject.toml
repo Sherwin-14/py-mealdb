@@ -7,6 +7,7 @@ readme = "README.md"
 license = "EPL-2.0"
 dependencies = [
     "httpx>=0.28.1",
+    "mypy>=1.19.1",
     "quarto>=0.1.0",
     "quartodoc>=0.11.1",
 ]

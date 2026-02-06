@@ -173,13 +173,13 @@ class MealDB:
             httpx.HTTPError: If any of the API requests fail.
         """
         r1 = httpx.get(f'{self.base_url}/list.php?c=list')
-        r.raise_for_status
+        r1.raise_for_status
         
         r2 = httpx.get(f'{self.base_url}/list.php?a=list')
-        r.raise_for_status
+        r2.raise_for_status
 
         r3 = httpx.get(f'{self.base_url}/list.php?i=list')
-        r.raise_for_status
+        r3.raise_for_status
 
         return {
         'categories': CategoryList.from_response(r1.json(), key='categories'),
