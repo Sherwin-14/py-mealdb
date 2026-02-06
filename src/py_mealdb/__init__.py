@@ -105,6 +105,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/search.php?f={letter}')
+        r.raise_for_status()
         return MealDetails.from_response(r.json())
 
     def list_meal_categories(self) -> CategoryList:
@@ -118,6 +119,7 @@ class MealDB:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
         """
         r = httpx.get(f'{self.base_url}/categories.php')
+        r.raise_for_status()
         return CategoryList.from_response(r.json(), key = "categories")
 
     def list_all_categories(self) -> CategoryList:
