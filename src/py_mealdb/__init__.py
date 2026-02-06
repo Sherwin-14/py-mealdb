@@ -38,7 +38,7 @@ class MealDB:
         r.raise_for_status()
         return MealDetails.from_response(r.json())
     
-    def get_latest_meal(self) -> list:
+    def get_latest_meal(self) -> Any:
         """
         Retrieves the latest meal data from the API.
 

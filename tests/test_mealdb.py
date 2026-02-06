@@ -3,7 +3,7 @@ import unittest.mock
 import httpx
 import os
 
-from mealdb import MealDB 
+from py_mealdb import MealDB 
 from unittest.mock import Mock, patch, mock_open
 
 
@@ -157,7 +157,7 @@ class TestMealDB(unittest.TestCase):
             self.assertGreater(len(response), 0)
 
     @patch('httpx.get')
-    def test_get_latest_meal(self, mock_get):
+    def test_get_latest_meal_fail(self, mock_get):
         mock_response = Mock()
         mock_response.json.return_value = {'meals': [1, 2, 3]}
         mock_get.return_value = mock_response
