@@ -28,7 +28,7 @@ class MealDB:
             name (str): The name of the meal to search for. (e.g. Arrabiata, Potato Salad, Blini Pancakes).
 
         Returns:
-            list: A list of meals matching the search query.
+             
 
         Raises:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.

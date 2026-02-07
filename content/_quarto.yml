@@ -20,7 +20,7 @@ website:
 quartodoc:
       style: single-page
       dir: reference
-      package: mealdb
+      package: py_mealdb
       dynamic: true
       parser: google
       sections:
