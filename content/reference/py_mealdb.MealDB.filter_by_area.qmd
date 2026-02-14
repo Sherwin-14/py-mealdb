@@ -1,0 +1,26 @@
+# filter_by_area { #py_mealdb.MealDB.filter_by_area }
+
+```python
+MealDB.filter_by_area(area)
+```
+
+Retrieves meals from a specific geographical area/cuisine.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name   | Type   | Description                                                     | Default    |
+|--------|--------|-----------------------------------------------------------------|------------|
+| area   | str    | The area to filter by (e.g., 'Canadian', 'Mexican', 'Italian'). | _required_ |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type     | Description                                                        |
+|--------|----------|--------------------------------------------------------------------|
+|        | MealList | MealList object containing meal summaries from the specified area. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type                  | Description                                              |
+|--------|-----------------------|----------------------------------------------------------|
+|        | httpx.HTTPError       | Check httpx's documentation for all possible exceptions. |
+|        | httpx.HTTPStatusError | If the API returns a non-2xx status code.                |

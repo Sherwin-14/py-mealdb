@@ -1,0 +1,26 @@
+# get_meal_by_name { #py_mealdb.MealDB.get_meal_by_name }
+
+```python
+MealDB.get_meal_by_name(name)
+```
+
+Retrieves detailed meal information by searching for a meal name.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name   | Type   | Description                                                             | Default    |
+|--------|--------|-------------------------------------------------------------------------|------------|
+| name   | str    | The name of the meal to search for (e.g., 'Arrabiata', 'Potato Salad'). | _required_ |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type        | Description                                              |
+|--------|-------------|----------------------------------------------------------|
+|        | MealDetails | MealDetails object containing detailed meal information. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type                  | Description                                              |
+|--------|-----------------------|----------------------------------------------------------|
+|        | httpx.HTTPError       | Check httpx's documentation for all possible exceptions. |
+|        | httpx.HTTPStatusError | If the API returns a non-2xx status code.                |

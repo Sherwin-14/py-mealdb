@@ -1,0 +1,11 @@
+# thumbnails { #py_mealdb.models.MealList.thumbnails }
+
+`models.MealList.thumbnails`
+
+Get all meal thumbnail URLs from the list.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type        | Description             |
+|--------|-------------|-------------------------|
+|        | List\[str\] | List of thumbnail URLs. |

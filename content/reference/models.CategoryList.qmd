@@ -1,0 +1,15 @@
+# models.CategoryList { #py_mealdb.models.CategoryList }
+
+```python
+models.CategoryList(items=list())
+```
+
+Container for meal category data.
+
+Used for endpoints that return meal categories available in TheMealDB.
+
+## Attributes
+
+| Name | Description |
+| --- | --- |
+| [categories](py_mealdb.models.CategoryList.categories.qmd#py_mealdb.models.CategoryList.categories) | Get all category names from the list. |

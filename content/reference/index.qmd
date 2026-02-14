@@ -1,0 +1,22 @@
+# Function reference {.doc .doc-index}
+
+## MealDB API Client
+
+Main client for interacting with TheMealDB API.
+
+| | |
+| --- | --- |
+| [MealDB](MealDB.qmd#py_mealdb.MealDB) | Client for interacting with TheMealDB API. |
+
+## Data Models
+
+Data structures for API responses.
+
+| | |
+| --- | --- |
+| [models.BaseList](models.BaseList.qmd#py_mealdb.models.BaseList) | Base class for list containers with common functionality. |
+| [models.MealList](models.MealList.qmd#py_mealdb.models.MealList) | Container for meal summary data. |
+| [models.MealDetails](models.MealDetails.qmd#py_mealdb.models.MealDetails) | Container for detailed meal information. |
+| [models.AreaList](models.AreaList.qmd#py_mealdb.models.AreaList) | Container for area/region data. |
+| [models.CategoryList](models.CategoryList.qmd#py_mealdb.models.CategoryList) | Container for meal category data. |
+| [models.IngredientList](models.IngredientList.qmd#py_mealdb.models.IngredientList) | Container for ingredient data. |

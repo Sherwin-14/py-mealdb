@@ -1,0 +1,11 @@
+# areas { #py_mealdb.models.AreaList.areas }
+
+`models.AreaList.areas`
+
+Get all area names from the list.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type        | Description         |
+|--------|-------------|---------------------|
+|        | List\[str\] | List of area names. |

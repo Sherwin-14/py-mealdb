@@ -1,0 +1,15 @@
+# models.IngredientList { #py_mealdb.models.IngredientList }
+
+```python
+models.IngredientList(items=list())
+```
+
+Container for ingredient data.
+
+Used for endpoints that return available ingredients in TheMealDB.
+
+## Attributes
+
+| Name | Description |
+| --- | --- |
+| [ingredients](py_mealdb.models.IngredientList.ingredients.qmd#py_mealdb.models.IngredientList.ingredients) | Get all ingredient names from the list. |

@@ -1,0 +1,20 @@
+# list_all_categories { #py_mealdb.MealDB.list_all_categories }
+
+```python
+MealDB.list_all_categories()
+```
+
+Retrieves a simple list of all category names.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type         | Description                                    |
+|--------|--------------|------------------------------------------------|
+|        | CategoryList | CategoryList object containing category names. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type                  | Description                                              |
+|--------|-----------------------|----------------------------------------------------------|
+|        | httpx.HTTPError       | Check httpx's documentation for all possible exceptions. |
+|        | httpx.HTTPStatusError | If the API returns a non-2xx status code.                |
