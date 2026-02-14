@@ -1,0 +1,19 @@
+# get_tags { #py_mealdb.models.MealDetails.get_tags }
+
+```python
+models.MealDetails.get_tags(meal_index=0)
+```
+
+Extract tags from a specific meal.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name       | Type   | Description                                            | Default   |
+|------------|--------|--------------------------------------------------------|-----------|
+| meal_index | int    | Index of the meal to extract tags from. Defaults to 0. | `0`       |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type        | Description                                                  |
+|--------|-------------|--------------------------------------------------------------|
+|        | List\[str\] | List of tag strings. Empty list if no tags or invalid index. |

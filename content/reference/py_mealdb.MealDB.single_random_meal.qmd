@@ -1,0 +1,20 @@
+# single_random_meal { #py_mealdb.MealDB.single_random_meal }
+
+```python
+MealDB.single_random_meal()
+```
+
+Retrieves a single random meal from the MealDB API.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type        | Description                                                         |
+|--------|-------------|---------------------------------------------------------------------|
+|        | MealDetails | MealDetails object containing a random meal's complete information. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type                  | Description                                              |
+|--------|-----------------------|----------------------------------------------------------|
+|        | httpx.HTTPError       | Check httpx's documentation for all possible exceptions. |
+|        | httpx.HTTPStatusError | If the API returns a non-2xx status code.                |

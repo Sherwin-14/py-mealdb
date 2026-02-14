@@ -1,0 +1,11 @@
+# categories { #py_mealdb.models.CategoryList.categories }
+
+`models.CategoryList.categories`
+
+Get all category names from the list.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type        | Description             |
+|--------|-------------|-------------------------|
+|        | List\[str\] | List of category names. |

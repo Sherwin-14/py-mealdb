@@ -1,0 +1,22 @@
+# models.BaseList { #py_mealdb.models.BaseList }
+
+```python
+models.BaseList(items=list())
+```
+
+Base class for list containers with common functionality.
+
+Provides standardized methods for working with list-based API responses,
+including iteration, indexing, length checking, and string representation.
+
+## Attributes {.doc-section .doc-section-attributes}
+
+| Name   | Type                     | Description                                        |
+|--------|--------------------------|----------------------------------------------------|
+| items  | List\[Dict\[str, Any\]\] | List of dictionaries containing API response data. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [from_response](py_mealdb.models.BaseList.from_response.qmd#py_mealdb.models.BaseList.from_response) | Create an instance from an API response dictionary. |
