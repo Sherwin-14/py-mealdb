@@ -15,10 +15,17 @@ Python client for TheMealDB API.
 This module provides a simple interface to interact with TheMealDB API endpoints.
 
 """
-
 import httpx
 
-from .models import *
+from typing import List, Dict, Any, Generic, Union, Optional, Iterator
+from .models import (
+    BaseList,
+    MealList,
+    MealDetails,
+    AreaList,
+    CategoryList,
+    IngredientList
+)
 
 class MealDB:
     """

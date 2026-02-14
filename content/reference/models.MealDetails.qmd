@@ -1,0 +1,27 @@
+# models.MealDetails { #py_mealdb.models.MealDetails }
+
+```python
+models.MealDetails(items=list())
+```
+
+Container for detailed meal information.
+
+Used for endpoints that return complete meal data including instructions,
+ingredients, measurements, tags, and other detailed information.
+
+## Attributes
+
+| Name | Description |
+| --- | --- |
+| [areas](py_mealdb.models.MealDetails.areas.qmd#py_mealdb.models.MealDetails.areas) | Get all meal areas/cuisines from the list. |
+| [categories](py_mealdb.models.MealDetails.categories.qmd#py_mealdb.models.MealDetails.categories) | Get all meal categories from the list. |
+| [ids](py_mealdb.models.MealDetails.ids.qmd#py_mealdb.models.MealDetails.ids) | Get all meal IDs from the list. |
+| [names](py_mealdb.models.MealDetails.names.qmd#py_mealdb.models.MealDetails.names) | Get all meal names from the list. |
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [from_response](py_mealdb.models.MealDetails.from_response.qmd#py_mealdb.models.MealDetails.from_response) | Create an instance from an API response, handling null meal data. |
+| [get_ingredients](py_mealdb.models.MealDetails.get_ingredients.qmd#py_mealdb.models.MealDetails.get_ingredients) | Extract ingredients and measurements from a specific meal. |
+| [get_tags](py_mealdb.models.MealDetails.get_tags.qmd#py_mealdb.models.MealDetails.get_tags) | Extract tags from a specific meal. |

@@ -1,0 +1,11 @@
+# categories { #py_mealdb.models.MealDetails.categories }
+
+`models.MealDetails.categories`
+
+Get all meal categories from the list.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type        | Description              |
+|--------|-------------|--------------------------|
+|        | List\[str\] | List of meal categories. |

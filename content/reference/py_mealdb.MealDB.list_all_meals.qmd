@@ -1,0 +1,26 @@
+# list_all_meals { #py_mealdb.MealDB.list_all_meals }
+
+```python
+MealDB.list_all_meals(letter)
+```
+
+Retrieves meals starting with a specific letter.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name   | Type   | Description                                           | Default    |
+|--------|--------|-------------------------------------------------------|------------|
+| letter | str    | The first letter to search for (e.g., 'a', 'b', 'c'). | _required_ |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type        | Description                                                                 |
+|--------|-------------|-----------------------------------------------------------------------------|
+|        | MealDetails | MealDetails object containing all meals starting with the specified letter. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type                  | Description                                              |
+|--------|-----------------------|----------------------------------------------------------|
+|        | httpx.HTTPError       | Check httpx's documentation for all possible exceptions. |
+|        | httpx.HTTPStatusError | If the API returns a non-2xx status code.                |

@@ -1,0 +1,26 @@
+# meal_details_by_id { #py_mealdb.MealDB.meal_details_by_id }
+
+```python
+MealDB.meal_details_by_id(id)
+```
+
+Retrieves detailed meal information by meal ID.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name   | Type   | Description                              | Default    |
+|--------|--------|------------------------------------------|------------|
+| id     | str    | The meal ID to retrieve (e.g., '52772'). | _required_ |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type        | Description                                                    |
+|--------|-------------|----------------------------------------------------------------|
+|        | MealDetails | MealDetails object containing the meal's complete information. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type                  | Description                                              |
+|--------|-----------------------|----------------------------------------------------------|
+|        | httpx.HTTPError       | Check httpx's documentation for all possible exceptions. |
+|        | httpx.HTTPStatusError | If the API returns a non-2xx status code.                |
