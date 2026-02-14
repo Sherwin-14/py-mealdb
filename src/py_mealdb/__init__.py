@@ -18,7 +18,14 @@ This module provides a simple interface to interact with TheMealDB API endpoints
 
 import httpx
 
-from .models import *
+from .models import (
+    BaseList,
+    MealList,
+    MealDetails,
+    AreaList,
+    CategoryList,
+    IngredientList
+)
 
 class MealDB:
     """
