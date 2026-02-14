@@ -552,7 +552,7 @@
     "href": "reference/models.MealDetails.html",
     "title": "models.MealDetails",
     "section": "",
-    "text": "models.MealDetails(items=list())\nContainer for detailed meal information.\nUsed for endpoints that return complete meal data including instructions, ingredients, measurements, tags, and other detailed information.\n\n\n\n\n\nName\nDescription\n\n\n\n\nareas\nGet all meal areas/cuisines from the list.\n\n\ncategories\nGet all meal categories from the list.\n\n\nids\nGet all meal IDs from the list.\n\n\nnames\nGet all meal names from the list.\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nfirst\nGet the first meal from the list.\n\n\nfrom_response\nCreate an instance from an API response, handling null meal data.\n\n\nget_ingredients\nExtract ingredients and measurements from a specific meal.\n\n\nget_tags\nExtract tags from a specific meal."
+    "text": "models.MealDetails(items=list())\nContainer for detailed meal information.\nUsed for endpoints that return complete meal data including instructions, ingredients, measurements, tags, and other detailed information.\n\n\n\n\n\nName\nDescription\n\n\n\n\nareas\nGet all meal areas/cuisines from the list.\n\n\ncategories\nGet all meal categories from the list.\n\n\nids\nGet all meal IDs from the list.\n\n\nnames\nGet all meal names from the list.\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nfrom_response\nCreate an instance from an API response, handling null meal data.\n\n\nget_ingredients\nExtract ingredients and measurements from a specific meal.\n\n\nget_tags\nExtract tags from a specific meal."
   },
   {
     "objectID": "reference/models.MealDetails.html#attributes",
@@ -566,7 +566,7 @@
     "href": "reference/models.MealDetails.html#methods",
     "title": "models.MealDetails",
     "section": "",
-    "text": "Name\nDescription\n\n\n\n\nfirst\nGet the first meal from the list.\n\n\nfrom_response\nCreate an instance from an API response, handling null meal data.\n\n\nget_ingredients\nExtract ingredients and measurements from a specific meal.\n\n\nget_tags\nExtract tags from a specific meal."
+    "text": "Name\nDescription\n\n\n\n\nfrom_response\nCreate an instance from an API response, handling null meal data.\n\n\nget_ingredients\nExtract ingredients and measurements from a specific meal.\n\n\nget_tags\nExtract tags from a specific meal."
   },
   {
     "objectID": "reference/models.IngredientList.html",
@@ -608,21 +608,30 @@
     "href": "reference/index.html",
     "title": "Function reference",
     "section": "",
-    "text": "Main client for interacting with TheMealDB API.\n\n\n\nMealDB\nClient for interacting with TheMealDB API.\n\n\n\n\n\n\nData structures for API responses.\n\n\n\nmodels.BaseList\nBase class for list containers with common functionality.\n\n\nmodels.MealList\nContainer for meal summary data.\n\n\nmodels.MealDetails\nContainer for detailed meal information.\n\n\nmodels.AreaList\nContainer for area/region data.\n\n\nmodels.CategoryList\nContainer for meal category data.\n\n\nmodels.IngredientList\nContainer for ingredient data."
+    "text": "Main client for interacting with TheMealDB API.\n\n\n\nMealDB\nClient for interacting with TheMealDB API.\n\n\n\n\n\n\nData structures for API responses.\n\n\n\nmodels.BaseList\nBase class for list containers with common functionality.\n\n\nmodels.MealList\nContainer for meal summary data.\n\n\nmodels.MealDetails\nContainer for detailed meal information.\n\n\nmodels.AreaList\nContainer for area/region data.\n\n\nmodels.CategoryList\nContainer for meal category data.\n\n\nmodels.IngredientList\nContainer for ingredient data.",
+    "crumbs": [
+      "API Reference"
+    ]
   },
   {
     "objectID": "reference/index.html#mealdb-api-client",
     "href": "reference/index.html#mealdb-api-client",
     "title": "Function reference",
     "section": "",
-    "text": "Main client for interacting with TheMealDB API.\n\n\n\nMealDB\nClient for interacting with TheMealDB API."
+    "text": "Main client for interacting with TheMealDB API.\n\n\n\nMealDB\nClient for interacting with TheMealDB API.",
+    "crumbs": [
+      "API Reference"
+    ]
   },
   {
     "objectID": "reference/index.html#data-models",
     "href": "reference/index.html#data-models",
     "title": "Function reference",
     "section": "",
-    "text": "Data structures for API responses.\n\n\n\nmodels.BaseList\nBase class for list containers with common functionality.\n\n\nmodels.MealList\nContainer for meal summary data.\n\n\nmodels.MealDetails\nContainer for detailed meal information.\n\n\nmodels.AreaList\nContainer for area/region data.\n\n\nmodels.CategoryList\nContainer for meal category data.\n\n\nmodels.IngredientList\nContainer for ingredient data."
+    "text": "Data structures for API responses.\n\n\n\nmodels.BaseList\nBase class for list containers with common functionality.\n\n\nmodels.MealList\nContainer for meal summary data.\n\n\nmodels.MealDetails\nContainer for detailed meal information.\n\n\nmodels.AreaList\nContainer for area/region data.\n\n\nmodels.CategoryList\nContainer for meal category data.\n\n\nmodels.IngredientList\nContainer for ingredient data.",
+    "crumbs": [
+      "API Reference"
+    ]
   },
   {
     "objectID": "reference/py_mealdb.MealDB.list_all.html",
@@ -685,7 +694,7 @@
     "href": "reference/py_mealdb.MealDB.get_ingredient_image_small.html",
     "title": "get_ingredient_image_small",
     "section": "",
-    "text": "MealDB.get_ingredient_image_small(ingredient)\nFetches and saves a small-size ingredient image locally.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ningredient\nstr\nThe ingredient name (e.g., ‘tomato’, ‘chicken’).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nbool\nTrue if the image was successfully fetched and saved, False otherwise.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the HTTP request fails."
+    "text": "MealDB.get_ingredient_image_small(ingredient)\nFetches and saves a small-size ingredient image locally.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ningredient\nstr\nThe ingredient name (e.g., ‘tomato’, ‘chicken’).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nbool\nTrue if the image was successfully fetched and saved, False otherwise.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the HTTP request fails.\n\n\n\nhttpx.HTTPStatusError\nIf the API returns a non-2xx status code."
   },
   {
     "objectID": "reference/py_mealdb.MealDB.get_ingredient_image_small.html#parameters",
@@ -706,7 +715,7 @@
     "href": "reference/py_mealdb.MealDB.get_ingredient_image_small.html#raises",
     "title": "get_ingredient_image_small",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the HTTP request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the HTTP request fails.\n\n\n\nhttpx.HTTPStatusError\nIf the API returns a non-2xx status code."
   },
   {
     "objectID": "reference/py_mealdb.MealDB.single_random_meal.html",
@@ -1007,7 +1016,7 @@
     "href": "reference/py_mealdb.MealDB.get_ingredient_image.html",
     "title": "get_ingredient_image",
     "section": "",
-    "text": "MealDB.get_ingredient_image(ingredient)\nFetches and saves a full-size ingredient image locally.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ningredient\nstr\nThe ingredient name (e.g., ‘tomato’, ‘chicken’).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nbool\nTrue if the image was successfully fetched and saved, False otherwise.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the HTTP request fails."
+    "text": "MealDB.get_ingredient_image(ingredient)\nFetches and saves a full-size ingredient image locally.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ningredient\nstr\nThe ingredient name (e.g., ‘tomato’, ‘chicken’).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nbool\nTrue if the image was successfully fetched and saved, False otherwise.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the HTTP request fails.\n\n\n\nhttpx.HTTPStatusError\nIf the API returns a non-2xx status code."
   },
   {
     "objectID": "reference/py_mealdb.MealDB.get_ingredient_image.html#parameters",
@@ -1028,7 +1037,7 @@
     "href": "reference/py_mealdb.MealDB.get_ingredient_image.html#raises",
     "title": "get_ingredient_image",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the HTTP request fails."
+    "text": "Name\nType\nDescription\n\n\n\n\n\nhttpx.HTTPError\nIf the HTTP request fails.\n\n\n\nhttpx.HTTPStatusError\nIf the API returns a non-2xx status code."
   },
   {
     "objectID": "reference/py_mealdb.MealDB.filter_by_ingredient.html",

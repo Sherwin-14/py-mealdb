@@ -14,7 +14,7 @@ website:
             - text: "Home" 
               href: index.qmd
             - text: "API Reference"
-              href: reference/index.qmd.qmd
+              href: reference/index.qmd
             - text: "Contributing Guide"
               href: contributing.qmd
 quartodoc:
