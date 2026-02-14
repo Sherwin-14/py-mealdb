@@ -1,0 +1,16 @@
+# models.AreaList { #py_mealdb.models.AreaList }
+
+```python
+models.AreaList(items=list())
+```
+
+Container for area/region data.
+
+Used for endpoints that return geographical areas or cuisines available
+in TheMealDB.
+
+## Attributes
+
+| Name | Description |
+| --- | --- |
+| [areas](py_mealdb.models.AreaList.areas.qmd#py_mealdb.models.AreaList.areas) | Get all area names from the list. |

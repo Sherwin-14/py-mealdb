@@ -1,0 +1,18 @@
+# models.MealList { #py_mealdb.models.MealList }
+
+```python
+models.MealList(items=list())
+```
+
+Container for meal summary data.
+
+Used for endpoints that return basic meal information including
+meal ID, name, and thumbnail. Typically used for filter and list endpoints.
+
+## Attributes
+
+| Name | Description |
+| --- | --- |
+| [ids](py_mealdb.models.MealList.ids.qmd#py_mealdb.models.MealList.ids) | Get all meal IDs from the list. |
+| [names](py_mealdb.models.MealList.names.qmd#py_mealdb.models.MealList.names) | Get all meal names from the list. |
+| [thumbnails](py_mealdb.models.MealList.thumbnails.qmd#py_mealdb.models.MealList.thumbnails) | Get all meal thumbnail URLs from the list. |

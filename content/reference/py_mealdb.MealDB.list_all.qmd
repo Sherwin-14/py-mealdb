@@ -1,0 +1,20 @@
+# list_all { #py_mealdb.MealDB.list_all }
+
+```python
+MealDB.list_all()
+```
+
+Retrieves all categories, areas, and ingredients in a single call.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type                                                         | Description                                                                                             |
+|--------|--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+|        | Dict\[str, Union\[CategoryList, AreaList, IngredientList\]\] | Dictionary with keys 'categories', 'areas', and 'ingredients' containing their respective list objects. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type                  | Description                                              |
+|--------|-----------------------|----------------------------------------------------------|
+|        | httpx.HTTPError       | Check httpx's documentation for all possible exceptions. |
+|        | httpx.HTTPStatusError | If the API returns a non-2xx status code.                |
