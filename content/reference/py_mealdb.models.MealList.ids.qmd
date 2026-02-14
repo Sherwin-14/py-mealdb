@@ -1,0 +1,11 @@
+# ids { #py_mealdb.models.MealList.ids }
+
+`models.MealList.ids`
+
+Get all meal IDs from the list.
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type        | Description       |
+|--------|-------------|-------------------|
+|        | List\[str\] | List of meal IDs. |

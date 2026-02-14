@@ -1,0 +1,20 @@
+# from_response { #py_mealdb.models.BaseList.from_response }
+
+```python
+models.BaseList.from_response(data, key='meals')
+```
+
+Create an instance from an API response dictionary.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name   | Type   | Description                                                | Default    |
+|--------|--------|------------------------------------------------------------|------------|
+| data   | dict   | The API response dictionary.                               | _required_ |
+| key    | str    | The key to extract from the response. Defaults to 'meals'. | `'meals'`  |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type     | Description                                                      |
+|--------|----------|------------------------------------------------------------------|
+|        | BaseList | An instance of the class with items populated from the response. |
