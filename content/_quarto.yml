@@ -18,17 +18,34 @@ website:
             - text: "Contributing Guide"
               href: contributing.qmd
 quartodoc:
-      style: single-page
+      style: pkgdown
       dir: reference
       package: py_mealdb
       dynamic: true
       parser: google
       sections:
-        - title: MealDB API Reference
-          desc: Functions to inspect docstrings.
-          contents:
-            - name: MealDB
-              children: separate
+      - title: MealDB API Client
+        desc: Main client for interacting with TheMealDB API.
+        contents:
+          - name: MealDB
+            children: separate
+      
+      - title: Data Models
+        desc: Data structures for API responses.
+        contents:
+          - name: models.BaseList
+            children: separate
+          - name: models.MealList
+            children: separate
+          - name: models.MealDetails
+            children: separate
+          - name: models.AreaList
+            children: separate
+          - name: models.CategoryList
+            children: separate
+          - name: models.IngredientList
+            children: separate
+      
 
 format:
   html:

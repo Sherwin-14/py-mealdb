@@ -1,31 +1,22 @@
-# MealDB API Reference
+# Function reference {.doc .doc-index}
 
-Functions to inspect docstrings.
+## MealDB API Client
 
-## MealDB { #py_mealdb.MealDB }
+Main client for interacting with TheMealDB API.
 
-```python
-MealDB(api_key)
-```
-
-
-
-### Methods
-
-| Name | Description |
+| | |
 | --- | --- |
-| [filter_by_area](py_mealdb.MealDB.filter_by_area.qmd#py_mealdb.MealDB.filter_by_area) | Retrieves a list of meals that originate from a specific area from the MealDB API. |
-| [filter_by_category](py_mealdb.MealDB.filter_by_category.qmd#py_mealdb.MealDB.filter_by_category) | Retrieves a list of meals that belong to a specific category from the MealDB API. |
-| [filter_by_ingredient](py_mealdb.MealDB.filter_by_ingredient.qmd#py_mealdb.MealDB.filter_by_ingredient) | Retrieves a list of meals that include a specific ingredient from the MealDB API. |
-| [get_ingredient_image](py_mealdb.MealDB.get_ingredient_image.qmd#py_mealdb.MealDB.get_ingredient_image) | Fetches an image of the specified ingredient from TheMealDB and saves it locally. |
-| [get_ingredient_image_small](py_mealdb.MealDB.get_ingredient_image_small.qmd#py_mealdb.MealDB.get_ingredient_image_small) | Fetches an scaled down image of the specified ingredient from TheMealDB and saves it locally. |
-| [get_latest_meal](py_mealdb.MealDB.get_latest_meal.qmd#py_mealdb.MealDB.get_latest_meal) | Retrieves the latest meal data from the API. |
-| [get_meal_by_name](py_mealdb.MealDB.get_meal_by_name.qmd#py_mealdb.MealDB.get_meal_by_name) | Retrieves a list of meals by name from the MealDB API. |
-| [list_all](py_mealdb.MealDB.list_all.qmd#py_mealdb.MealDB.list_all) | Retrieves a list of all categories, areas, and ingredients from the MealDB API. |
-| [list_all_areas](py_mealdb.MealDB.list_all_areas.qmd#py_mealdb.MealDB.list_all_areas) | Retrieves a list of all areas from the MealDB API. |
-| [list_all_categories](py_mealdb.MealDB.list_all_categories.qmd#py_mealdb.MealDB.list_all_categories) | Retrieves a list of all categories from the MealDB API. |
-| [list_all_ingredients](py_mealdb.MealDB.list_all_ingredients.qmd#py_mealdb.MealDB.list_all_ingredients) | Retrieves a list of all ingredients from the MealDB API. |
-| [list_all_meals](py_mealdb.MealDB.list_all_meals.qmd#py_mealdb.MealDB.list_all_meals) | Retrieves a list of meals starting with a specific letter from the MealDB API. |
-| [list_meal_categories](py_mealdb.MealDB.list_meal_categories.qmd#py_mealdb.MealDB.list_meal_categories) | Retrieves a list of meal categories from the MealDB API. |
-| [meal_details_by_id](py_mealdb.MealDB.meal_details_by_id.qmd#py_mealdb.MealDB.meal_details_by_id) | Retrieves the details of a meal by its ID from the MealDB API. |
-| [single_random_meal](py_mealdb.MealDB.single_random_meal.qmd#py_mealdb.MealDB.single_random_meal) | Retrieves a single random meal from the MealDB API. |
+| [MealDB](MealDB.qmd#py_mealdb.MealDB) | Client for interacting with TheMealDB API. |
+
+## Data Models
+
+Data structures for API responses.
+
+| | |
+| --- | --- |
+| [models.BaseList](models.BaseList.qmd#py_mealdb.models.BaseList) | Base class for list containers with common functionality. |
+| [models.MealList](models.MealList.qmd#py_mealdb.models.MealList) | Container for meal summary data. |
+| [models.MealDetails](models.MealDetails.qmd#py_mealdb.models.MealDetails) | Container for detailed meal information. |
+| [models.AreaList](models.AreaList.qmd#py_mealdb.models.AreaList) | Container for area/region data. |
+| [models.CategoryList](models.CategoryList.qmd#py_mealdb.models.CategoryList) | Container for meal category data. |
+| [models.IngredientList](models.IngredientList.qmd#py_mealdb.models.IngredientList) | Container for ingredient data. |

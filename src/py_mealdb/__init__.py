@@ -62,8 +62,7 @@ class MealDB:
         Retrieves the latest meal data from the API.
 
         Returns:
-            String message if subscription is required, otherwise MealDetails object 
-            containing the latest meal data.
+            String message if subscription is required, otherwise MealDetails object containing the latest meal data.
 
         Raises:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
@@ -73,6 +72,7 @@ class MealDB:
             a message is returned instead of meal data.
         """
         r = httpx.get(f'{self.base_url}/latest.php')
+        r.raise_for_status()
         data = r.json()
         meal = data['meals']
         if len(meal) == 3:
@@ -136,8 +136,7 @@ class MealDB:
         Retrieves detailed information about all meal categories.
 
         Returns:
-            CategoryList object containing detailed category information including 
-            descriptions and thumbnails.
+            CategoryList object containing detailed category information including descriptions and thumbnails.
 
         Raises:
             httpx.HTTPError:Check httpx's documentation for all possible exceptions.
@@ -197,8 +196,7 @@ class MealDB:
         Retrieves all categories, areas, and ingredients in a single call.
 
         Returns:
-            Dictionary with keys 'categories', 'areas', and 'ingredients' containing
-            their respective list objects.
+            Dictionary with keys 'categories', 'areas', and 'ingredients' containing their respective list objects.
 
         Raises:
             httpx.HTTPError: Check httpx's documentation for all possible exceptions.
@@ -285,8 +283,10 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the HTTP request fails.
+            httpx.HTTPStatusError: If the API returns a non-2xx status code.
         """
         r =  httpx.get(f'https://www.themealdb.com/images/ingredients/{ingredient}.png')
+        r.raise_for_status()
         image_data = r.content
         with open(f'{ingredient}.png', 'wb') as file:
             file.write(image_data)
@@ -306,8 +306,10 @@ class MealDB:
 
         Raises:
             httpx.HTTPError: If the HTTP request fails.
+            httpx.HTTPStatusError: If the API returns a non-2xx status code.
         """
         r =  httpx.get( f'https://www.themealdb.com/images/ingredients/{ingredient}-Small.png')
+        r.raise_for_status()
         image_data = r.content
         with open(f'{ingredient}-small.png', 'wb') as file:
             file.write(image_data)
