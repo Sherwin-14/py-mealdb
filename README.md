@@ -20,12 +20,12 @@ pip install py-mealdb
 ## 🏃‍♂️ Quick Start
 
 ```py
-from mealdb import MealDB
+from py_mealdb import MealDB
 
 mb = MealDB(API_KEY)
-meal = mb.get_meal_by_name('Potato Salad')
-
-print(meal)
+meals = mb.get_meal_by_name('Potato Salad')
+print(meals.names)        # ['Potato Salad']
+print(meals[0]['strMeal']) # 'Potato Salad'
 ```
 
 ## 🤝 Contributing
