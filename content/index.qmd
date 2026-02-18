@@ -8,6 +8,18 @@ format:
   
 ---
 
+::: {.callout-note appearance="simple"}
+
+## Installation Note
+
+The current package version (v1.0.0) is not yet released on PyPI. To use the latest version, install directly from GitHub:
+
+```bash
+pip install git+https://github.com/Sherwin-14/py-mealdb.git
+```
+
+:::
+
 # The MealDB Python Library
 
 The MealDB Python Library provides seamless access to The MealDB API, enabling developers to integrate a rich database of meal recipes into their applications. The library is designed for Python, making it easy to incorporate meal data into your projects.

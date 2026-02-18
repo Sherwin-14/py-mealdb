@@ -44,7 +44,7 @@
     "href": "index.html",
     "title": "The MealDB Python Library",
     "section": "",
-    "text": "The MealDB Python Library provides seamless access to The MealDB API, enabling developers to integrate a rich database of meal recipes into their applications. The library is designed for Python, making it easy to incorporate meal data into your projects.\n\n\nBefore getting started make sure that you have got your API_KEY from The Meal DB.\nfrom mealdb import MealDB\n\nmb = MealDB(API_KEY)\nmeal = mb.get_meal_by_name('Potato Salad')\n\nprint(meal)\n\n\n\nWe appreciate all contributions, from reporting bugs to implementing new features. Read our contributing guide to learn more.\n\n\n\nThis program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0.",
+    "text": "NoteInstallation Note\n\n\n\nThe current package version (v1.0.0) is not yet released on PyPI. To use the latest version, install directly from GitHub:\npip install git+https://github.com/Sherwin-14/py-mealdb.git",
     "crumbs": [
       "Home"
     ]
@@ -53,8 +53,8 @@
     "objectID": "index.html#get-started",
     "href": "index.html#get-started",
     "title": "The MealDB Python Library",
-    "section": "",
-    "text": "Before getting started make sure that you have got your API_KEY from The Meal DB.\nfrom mealdb import MealDB\n\nmb = MealDB(API_KEY)\nmeal = mb.get_meal_by_name('Potato Salad')\n\nprint(meal)",
+    "section": "Get Started",
+    "text": "Get Started\nBefore getting started make sure that you have got your API_KEY from The Meal DB.\nfrom py_mealdb import MealDB\n\nmb = MealDB(API_KEY)\nmeals = mb.get_meal_by_name('Potato Salad')\nprint(meals.names)        # ['Potato Salad']\nprint(meals[0]['strMeal']) # 'Potato Salad'",
     "crumbs": [
       "Home"
     ]
@@ -63,8 +63,8 @@
     "objectID": "index.html#contributing",
     "href": "index.html#contributing",
     "title": "The MealDB Python Library",
-    "section": "",
-    "text": "We appreciate all contributions, from reporting bugs to implementing new features. Read our contributing guide to learn more.",
+    "section": "Contributing",
+    "text": "Contributing\nWe appreciate all contributions, from reporting bugs to implementing new features. Read our contributing guide to learn more.",
     "crumbs": [
       "Home"
     ]
@@ -73,8 +73,8 @@
     "objectID": "index.html#license",
     "href": "index.html#license",
     "title": "The MealDB Python Library",
-    "section": "",
-    "text": "This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0.",
+    "section": "License",
+    "text": "License\nThis program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0.",
     "crumbs": [
       "Home"
     ]
