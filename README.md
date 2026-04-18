@@ -19,6 +19,11 @@ pip install py-mealdb
 
 ## 🏃‍♂️ Quick Start
 
+### API Key
+This library currently supports the free tier of TheMealDB API.
+
+> Note: Production/beta API features are not currently supported. If you'd like to see production API support, feel free to open an issue or submit a PR!
+
 ```py
 from py_mealdb import MealDB
 
